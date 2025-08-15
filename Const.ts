@@ -36,6 +36,38 @@ export const cardData = [
 
 
 
+// Bento images and titles for the Bento component (ServicesGrid.tsx)
+// This data can be used to render the Bento component in the homepage or HomeCompo folder
+export const services = [
+  {
+    img: "/bento1.png",
+    title: "Smart Business Solutions",
+    desc: "From AI insights to streamlined workflows, we identify the smartest ways to boost efficiency, cut waste, and position your business for long-term success.",
+    widthClass: "md:w-[666px]",
+  },
+  {
+    img: "/bento2.png",
+    title: "Cloud & Data Innovation",
+    desc: "Flexible, secure cloud strategies that boost performance, collaboration, and control over your data.",
+    widthClass: "md:w-[469px]",
+  },
+  {
+    img: "/bento3.png",
+    title: "Support That Scales",
+    desc: "We keep your systems evolving so your business stays competitive.",
+    widthClass: "md:w-[469px]",
+  },
+  {
+    img: "/bento4.png",
+    title: "Build for Your Business Landscape",
+    desc: "Whether in retail, healthcare, manufacturing, or beyond, our solutions are designed to tackle your sector’s real challenges and deliver measurable results.",
+    widthClass: "md:w-[666px]",
+  },
+];
+
+
+
+
 
 // Process steps data for the ProcessSteps component in homepage or HomeCompo folder
 // This data can be used to render the steps in the ProcessSteps component
