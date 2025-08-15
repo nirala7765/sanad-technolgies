@@ -12,7 +12,7 @@ export default function Footer() {
           {/* You can replace this with your actual logo image */}
              <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/sanadLogo.svg"
+              src="/logo.png"
               alt="Logo"
               width={90}
               height={90}

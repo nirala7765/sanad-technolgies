@@ -24,7 +24,7 @@ const NavBar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/sanadLogo.svg"
+              src="/logo.png"
               alt="Logo"
               width={40}
               height={40}
