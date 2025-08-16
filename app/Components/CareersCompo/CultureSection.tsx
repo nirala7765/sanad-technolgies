@@ -48,7 +48,7 @@ export default function CultureSection() {
           <div key={idx} className="flex flex-col space-y-4">
             <div className="text-white">{item.icon}</div>
             <h3 className="text-lg font-semibold">{item.title}</h3>
-            <p className="text-gray-400 text-sm">{item.desc}</p>
+            <p className="text-white text-sm">{item.desc}</p>
           </div>
         ))}
       </div>
@@ -60,7 +60,7 @@ export default function CultureSection() {
         </p>
         <a
           href="#apply"
-          className="px-6 py-2 bg-[#57BFFF] hover:bg-blue-400 rounded-full font-medium transition-all duration-300 hover:scale-105"
+          className="px-6 py-2 bg-[#57BFFF] hover:bg-[#3ba7dd] rounded-full font-medium transition-all duration-300 hover:scale-105"
         >
           Apply Now
         </a>

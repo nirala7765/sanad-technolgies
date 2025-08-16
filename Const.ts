@@ -2,11 +2,11 @@
 export const OUR_STORY = {
   sectionTitle: "Our Story",
   firstBlock: {
-    image: "/story1.png", // Path to first image
+    image: "/story_1.png", // Path to first image
     text: "Sanad Technologies was founded with a simple belief — that technology should be a bridge, not a barrier, to business growth. We saw too many companies struggling to turn great ideas into working solutions, so we set out to change that."
   },
   secondBlock: {
-    image: "/story1.png", // Path to second image
+    image: "/story_2.png", // Path to second image
     text: "Today, We help businesses unlock their potential with smart, scalable, and reliable technology. From first conversation to final delivery, we focus on your challenges, creating solutions that fit — and building partnerships that help you grow in a fast-changing world."
   }
 };
@@ -86,7 +86,7 @@ export const PROCESS_STEPS = [
     num: "01",
     title: "Understand Your Vision",
     desc: "We work closely with you to define goals and success criteria.",
-    img: "/bgfa.png",
+    img: "/define.png",
     cta: "Learn More",
   },
   {
@@ -94,7 +94,7 @@ export const PROCESS_STEPS = [
     num: "02",
     title: "Shape the Solution",
     desc: "Our designers create a solution blueprint that meets your needs.",
-    img: "/bgfa.png",
+    img: "/design.png",
     cta: "See Designs",
   },
   {
@@ -102,7 +102,7 @@ export const PROCESS_STEPS = [
     num: "03",
     title: "Build with Precision",
     desc: "We build high-quality solutions with precision and efficiency.",
-    img: "/bgfa.png",
+    img: "/develope.png",
     cta: "Explore Build",
   },
   {
@@ -110,7 +110,7 @@ export const PROCESS_STEPS = [
     num: "04",
     title: "Deliver & Support",
     desc: "We launch your solution seamlessly, backed by thorough testing, smooth handover, and ongoing support.",
-    img: "/bgfa.png",
+    img: "/deploy.png",
     cta: "Get Started",
   },
 ];
@@ -137,7 +137,7 @@ export const sections = [
       "Ensure solutions are scalable and secure",
       "No-obligation, no-cost assessment",
     ],
-    img: "/bgfa.png",
+    img: "/ai1.png",
   },
   {
     icon: "/workflow.png",
@@ -149,7 +149,7 @@ export const sections = [
       "Identify bottlenecks and recurring issues",
       "Recommend a detailed roadmap with migration options that align with business goals",
     ],
-    img: "/bgfa.png",
+    img: "/mig2.png",
   },
   {
     icon: "/retailicon.png",
@@ -163,7 +163,7 @@ export const sections = [
       "Manufacturing: Automate production monitoring and quality control",
       "Telecommunications & Contact Centers: Build efficient, AI-enabled customer service systems",
     ],
-    img: "/bgfa.png",
+    img: "/fr3.png",
   },
   {
     icon: "/scalericon.png",
@@ -177,7 +177,7 @@ export const sections = [
       "Optimize costs through smarter resource management",
       "Enable remote access and collaboration securely",
     ],
-    img: "/bgfa.png",
+    img: "/ss4.png",
   },
   {
     icon: "/supportai.png",
@@ -191,7 +191,60 @@ export const sections = [
       "Rapid response to issues and changing requirements",
       "Long-term partnership to keep you competitive"
     ],
-    img: "/bgfa.png",
+    img: "/os5.png",
   },
 ];
+
+
+//Airoadmap component data
+// This data can be used to render the steps in the AI Roadmap component
+// AI Steps data for the AI Roadmap component in HomeCompo folder
+// This data can be used to render the steps in the AI Roadmap component
+// It includes the image, title, description, and a function to set the image reference for
+
+export const aiSteps = [
+  {
+    img: "/aimap1.png", // update with your image path
+    title: "Schedule Your Free Assessment",
+    desc: "Book a quick call at a time that works for you and get your assessment signed.",
+  },
+  {
+    img: "/aimap2.png",
+    title: "Identify Opportunities",
+    desc: "We then explore your business processes with you to spot the best AI use cases in.",
+  },
+  {
+    img: "/aimap3.png",
+    title: "Get Your AI Roadmap",
+    desc: "Walk away with a clear, actionable plan, free of charge.",
+  },
+];
+
+//component in AboutCompo folder
+// Transform Business Data for the TransformBusiness component in HomeCompo folder
+// This data can be used to render the Transform Business section
+
+export const transformBusinessData = {
+  videoSrc: "/bg1.mp4", // path from /public folder
+  overlayOpacity: "bg-black/50",
+  paragraph: `At Sanad Technologies, we believe technology should work for you,
+  not against you, that’s why we partner with businesses to design,
+  build, and deliver solutions that are as reliable as they are
+  innovative, helping you grow today and thrive tomorrow.`,
+
+  heading: "Transform Your Business with Cutting Edge Technology Today!",
+  buttonText: "Get Started",
+};
+
+
+
+
+//about page hero video  
+
+// const.ts
+
+export const videos = {
+  aboutHero: "/sanad-vid.mp4", // place your video file in /public/videos
+};
+
 

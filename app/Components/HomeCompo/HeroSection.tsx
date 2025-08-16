@@ -1,64 +1,58 @@
 "use client";
 import { FiArrowRight } from "react-icons/fi";
-import Image from "next/image";
 
-export default function ServiceHero() {
+export default function HeroSection() {
   return (
-    <section className="relative bg-black text-white px-4 md:py-20">
-      <div className="pt-[100px]">
+    <section className="relative bg-black text-white min-h-screen flex items-center px-4 py-16 md:py-20">
+      <div className="w-full">
         {/* Top Pill CTA */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-3 border border-[#57BFFF] rounded-full px-4 py-2 text-sm md:text-base cursor-pointer hover:bg-[#57BFFF]/10 transition">
-            <span className="text-gray-300">Looking for AI?</span>
-            <span className="flex items-center gap-1 text-gray-200 font-medium">
-              Click Here <FiArrowRight size={16} />
+        <div className="flex justify-center mb-12">
+          <div className="group inline-flex items-center gap-3 border border-[#57BFFF] rounded-full px-5 py-2 text-sm md:text-base cursor-pointer hover:bg-[#57BFFF]/10 transition">
+            <span className="font-medium text-white">Looking for AI?</span>
+            <span className="text-[#9D9D9D]">|</span>
+            <span className="flex items-center gap-2 font-medium text-[#9D9D9D]">
+              Click Here
+              <span className="relative flex items-center justify-center">
+                <FiArrowRight size={16} className="relative z-10 text-[#9D9D9D]" />
+              </span>
             </span>
           </div>
         </div>
 
-        {/* Heading + Description */}
-        <div className="text-center max-w-3xl mx-auto mb-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            Explore What We Can Do for You
+        {/* Heading */}
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h1 className="text-3xl md:text-5xl font-bold mb-8 leading-snug">
+            Make Technology Work for Your <br /> Business with{" "}
+            <span className="text-[#57BFFF]">Sanad Tech</span>
           </h1>
-          <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-            Explore tailored solutions from intelligent platforms to scalable operations
-            designed to help your business innovate faster, operate smarter, and compete stronger.
-          </p>
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12 flex-wrap">
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8 flex-wrap">
           {/* Let's Talk button */}
-          <button className="bg-[#57BFFF] text-black font-semibold px-6 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer">
+          <button className="bg-[#57BFFF] text-white font-semibold px-6 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-[15px]">
             Let&apos;s Talk
           </button>
 
-          {/* About Us button */}
-          <button className="group flex items-center gap-2 border border-gray-500 px-6 py-3 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer">
+          {/* Learn More button */}
+          <button className="group flex items-center gap-3 border border-gray-600 px-6 py-3 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer text-[15px]">
             Learn More
-            <FiArrowRight
-              size={18}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
+            <span className="relative flex items-center justify-center">
+              <span className="absolute w-7 h-7 rounded-full bg-white/10 group-hover:bg-black/10 transition"></span>
+              <FiArrowRight
+                size={18}
+                className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </span>
           </button>
         </div>
 
-        <div>
-          <p className="text-gray-400 text-sm md:text-base leading-relaxed text-center justify-center lg:pb-48">We help you solve challenges, improve efficiency, and build the right technology foundation for lasting growth.</p>
-
-        </div>
-
-        {/* Large Image */}
-        <div className="max-w-6xl mx-auto rounded-2xl overflow-hidden">
-          <Image
-            src="/bgfa.png"
-            alt="Service Hero"
-            width={1920}
-            height={1080}
-            className="w-full h-auto object-cover"
-            priority
-          />
+        {/* Description below buttons */}
+        <div className="text-center max-w-2xl mx-auto">
+          <p className="text-gray-400 text-[18px] md:text-base leading-relaxed pt-5">
+            We help you solve challenges, improve efficiency, and build the right
+            technology foundation for lasting growth.
+          </p>
         </div>
       </div>
     </section>

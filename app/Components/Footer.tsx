@@ -8,9 +8,9 @@ export default function Footer() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white space-y-6">
       {/* Logo */}
       <div className="flex flex-col items-center">
-        <div className="w-28 h-24  rounded-full flex items-center justify-center">
+        <div className="w-28 h-24 rounded-full flex items-center justify-center">
           {/* You can replace this with your actual logo image */}
-             <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/logo.png"
               alt="Logo"
@@ -18,7 +18,6 @@ export default function Footer() {
               height={90}
               className="object-contain"
             />
-
           </Link>
         </div>
         <h1 className="mt-4 text-2xl font-bold">Sanad Technologies</h1>
@@ -38,13 +37,13 @@ export default function Footer() {
         ))}
       </div>
 
-      {/* Social Media Icons with Animation */}
+      {/* Social Media Icons with Magnify on Hover */}
       <div className="flex space-x-6 mt-4">
         {[FaWhatsapp, FaTwitter, FaInstagram, FaLinkedin].map((Icon, idx) => (
           <a
             key={idx}
             href="#"
-            className="text-gray-400 hover:text-[#57BFFF] transform hover:scale-125 hover:animate-bounce transition-all duration-300"
+            className="text-gray-400 hover:text-[#57BFFF] transform hover:scale-125 transition-all duration-300"
           >
             <Icon size={24} />
           </a>

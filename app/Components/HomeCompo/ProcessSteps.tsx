@@ -17,10 +17,10 @@ export default function ProcessSteps() {
     <section className="bg-black text-white px-4 py-16">
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-3xl md:text-5xl font-bold">
+        <h2 className="text-2xl md:text-4xl font-bold">
           How We Turn Ideas into Impact
         </h2>
-        <p className="text-gray-400 text-sm md:text-base mt-4">
+        <p className="text-[#808080] text-[18px] mt-4">
           A clear, collaborative process that ensures your project is delivered
           on time, on budget, and above expectations.
         </p>
@@ -45,11 +45,11 @@ export default function ProcessSteps() {
                 <div className="inline-flex items-center border border-[#57BFFF] rounded-xl px-3 py-1 text-sm mb-3 w-fit hover:bg-[#57BFFF]/10 transition-colors">
                   <span className="font-semibold whitespace-nowrap">{step.phase}</span>
                   <span className="mx-3 w-px h-4 bg-gray-500" />
-                  <span className="text-gray-400">{step.num}</span>
+                  <span className="text-[#9D9D9D]">{step.num}</span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl md:text-2xl font-semibold">{step.title}</h3>
+                <h3 className="text-xl md:text-3xl font-semibold">{step.title}</h3>
 
                 {/* Unfold (desc + button) */}
                 <div
@@ -57,11 +57,11 @@ export default function ProcessSteps() {
                     isActive ? "max-h-40 mt-3 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="text-gray-400 text-sm">{step.desc}</p>
+                  <p className="text-[#808080] text-[18px]">{step.desc}</p>
 
                   {step.cta && (
                     <button
-                      className={`mt-5 bg-[#57BFFF] hover:bg-[#42aee6] text-black px-5 py-2 rounded-lg font-semibold w-fit transition-all duration-300 ${
+                      className={`mt-5 bg-[#57BFFF] hover:bg-[#42aee6] text-white px-5 py-2 rounded-lg font-semibold w-fit transition-all duration-300 ${
                         isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
                       }`}
                     >

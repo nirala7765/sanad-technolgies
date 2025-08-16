@@ -28,7 +28,8 @@ const blocks = [
 ];
 
 export default function WhatWeStandFor() {
-  const [activeId, setActiveId] = useState(1);
+  const [activeId] = useState(1); // default active card
+  const [hoverId, setHoverId] = useState<number | null>(null); // track hover
 
   return (
     <section
@@ -41,7 +42,7 @@ export default function WhatWeStandFor() {
     >
       <h2
         className="
-          text-3xl md:text-5xl lg:text-7xl
+          text-2xl md:text-4xl 
           font-bold mb-8 lg:mb-28 text-center
         "
       >
@@ -55,20 +56,25 @@ export default function WhatWeStandFor() {
         "
       >
         {blocks.map((block) => {
-          const isActive = block.id === activeId;
+          // if hoverId exists → only hovered card is active
+          // otherwise → default activeId (card 1)
+          const isActive =
+            hoverId !== null ? block.id === hoverId : block.id === activeId;
 
           return (
             <div
               key={block.id}
-              onClick={() => setActiveId(block.id)}
+              onMouseEnter={() => setHoverId(block.id)}
+              onMouseLeave={() => setHoverId(null)}
               className={`
-                cursor-pointer rounded-lg
+                group cursor-pointer rounded-lg
                 p-6 md:p-7 lg:p-8
                 bg-[#1A1A1A] transition-all duration-300 border-2
                 flex flex-col justify-between
-                ${isActive
-                  ? `border-[${THEME_COLOR}]`
-                  : "border-transparent hover:border-gray-600"
+                ${
+                  isActive
+                    ? `border-[${THEME_COLOR}]`
+                    : "border-transparent hover:border-[#808080]"
                 }
                 lg:w-[380px] lg:h-[435px]
                 w-full h-auto
@@ -78,9 +84,14 @@ export default function WhatWeStandFor() {
               {/* Top section: Icon + Title */}
               <div className="flex flex-col gap-3 md:gap-4">
                 <div
-                  className={`transition-colors duration-300 ${
-                    isActive ? `text-[${THEME_COLOR}]` : "text-white"
-                  }`}
+                  className={`
+                    transition-colors duration-300
+                    ${
+                      isActive
+                        ? `text-[${THEME_COLOR}]`
+                        : "text-white"
+                    }
+                  `}
                 >
                   {block.icon}
                 </div>
@@ -90,7 +101,7 @@ export default function WhatWeStandFor() {
               </div>
 
               {/* Middle section: Description */}
-              <p className="text-sm md:text-base text-gray-300 leading-relaxed my-3 md:my-4 flex-grow">
+              <p className="text-sm md:text-base text-[#EEEEEE] leading-relaxed my-3 md:my-4 flex-grow">
                 {block.text}
               </p>
 
@@ -99,7 +110,11 @@ export default function WhatWeStandFor() {
                 className={`
                   text-3xl md:text-5xl lg:text-7xl
                   font-light transition-colors duration-300
-                  ${isActive ? `text-[${THEME_COLOR}]` : "text-gray-500"}
+                  ${
+                    isActive
+                      ? `text-[${THEME_COLOR}]`
+                      : "text-[#808080]"
+                  }
                 `}
               >
                 {String(block.id).padStart(2, "0")}

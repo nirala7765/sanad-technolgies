@@ -2,11 +2,25 @@
 
 import { useState } from "react";
 
+// Example list of country codes (you can expand as needed)
+const countryCodes = [
+  { code: "+91", name: "India" },
+  { code: "+1", name: "USA" },
+  { code: "+44", name: "UK" },
+  { code: "+61", name: "Australia" },
+  { code: "+81", name: "Japan" },
+  { code: "+49", name: "Germany" },
+  { code: "+33", name: "France" },
+  { code: "+86", name: "China" },
+  { code: "+7", name: "Russia" },
+];
+
 export default function Contactform() {
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
+    countryCode: "+91",
     category: "",
     message: "",
   });
@@ -22,6 +36,7 @@ export default function Contactform() {
       name: "",
       email: "",
       phone: "",
+      countryCode: "+91",
       category: "",
       message: "",
     });
@@ -36,7 +51,7 @@ export default function Contactform() {
     <section
       id="contact"
       className="bg-black text-white px-6 py-12 pt-[100px] md:pt-[200px] md:px-20 lg:px-32"
-      style={{ scrollMarginTop: "120px" }} // matches sticky navbar height
+      style={{ scrollMarginTop: "120px" }}
     >
       {/* Heading */}
       <div className="text-center mb-10">
@@ -108,8 +123,19 @@ export default function Contactform() {
         {/* Phone */}
         <div>
           <label className="block font-semibold mb-2">Phone</label>
-          <div className="flex items-center gap-2 border-b border-gray-500 focus-within:border-[#57BFFF]">
-            <span className="text-gray-400">+91</span>
+          <div className="flex gap-2 border-b border-gray-500 focus-within:border-[#57BFFF]">
+            <select
+              name="countryCode"
+              value={form.countryCode}
+              onChange={handleChange}
+              className="bg-transparent text-gray-400 outline-none py-2"
+            >
+              {countryCodes.map((c, idx) => (
+                <option key={idx} value={c.code}>
+                  {c.code} ({c.name})
+                </option>
+              ))}
+            </select>
             <input
               type="tel"
               name="phone"
