@@ -1,10 +1,17 @@
+
+
 // components/ServicesGrid.tsx
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { services } from "../../../Const"; // adjust path as needed
 
 export default function ServicesGrid() {
+  const router = useRouter();
   return (
-    <section className="bg-black text-white px-4 py-16">
+    <section 
+      id="services-grid"
+      className="bg-black text-white px-4 py-16">
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
         <h2 className="text-2xl md:text-4xl font-bold mb-4">
@@ -41,7 +48,10 @@ export default function ServicesGrid() {
             <br className="hidden md:block" />
             custom solution for your business.
           </p>
-          <button className="bg-[#57BFFF] text-white font-semibold px-6 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer">
+          <button 
+          
+            onClick={() => router.push("/contact#contact-form")}
+            className="bg-[#57BFFF] text-white font-semibold px-6 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer">
             Let’s Talk
           </button>
         </div>

@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { PROCESS_STEPS } from "../../../Const";
 
 export default function ProcessSteps() {
+  const router = useRouter();
   const [activeStep, setActiveStep] = useState(PROCESS_STEPS.length - 1); // last step active by default
   const [hoverStep, setHoverStep] = useState<number | null>(null);
 
@@ -14,7 +16,9 @@ export default function ProcessSteps() {
   };
 
   return (
-    <section className="bg-black text-white px-4 py-16">
+    <section 
+      id="process-steps"
+      className="bg-black text-white px-4 py-16">
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
         <h2 className="text-2xl md:text-4xl font-bold">
@@ -61,6 +65,9 @@ export default function ProcessSteps() {
 
                   {step.cta && (
                     <button
+                      onClick={() => router.push("/contact#contact-form")
+
+                      }
                       className={`mt-5 bg-[#57BFFF] hover:bg-[#42aee6] text-white px-5 py-2 rounded-lg font-semibold w-fit transition-all duration-300 ${
                         isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
                       }`}

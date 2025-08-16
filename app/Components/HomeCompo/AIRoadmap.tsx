@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
 import { aiSteps } from "../../../Const";
+import { useRouter } from "next/navigation";
 
 export default function AIRoadmap() {
+  const router = useRouter();
   return (
-    <section className="bg-black text-white flex flex-col justify-center items-center px-6 md:px-12 lg:px-20 lg:min-h-[100svh]">
+    <section id="ai-roadmap" className="bg-black text-white flex flex-col justify-center items-center px-6 md:px-12 lg:px-20 lg:min-h-[100svh]">
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
         <h2 className="text-2xl md:text-4xl font-semibold leading-snug mb-6">
@@ -48,7 +51,11 @@ export default function AIRoadmap() {
             <br className="hidden md:block" />
             where AI can deliver the biggest impact for your business.
           </p>
-          <button className="bg-[#57BFFF] text-white font-semibold px-6 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer">
+          <button 
+
+        onClick={() => router.push("/contact#contact-form")}
+          
+          className="bg-[#57BFFF] text-white font-semibold px-6 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer">
             Let’s Talk
           </button>
         </div>

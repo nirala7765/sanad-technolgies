@@ -1,9 +1,12 @@
 // app/Components/AboutCompo/TransformBusiness.tsx
 "use client";
 import { FiArrowRight } from "react-icons/fi";
+import { useRouter } from "next/navigation";
+
 import { transformBusinessData } from "../../../Const";
 
 export default function TransformBusiness() {
+  const router = useRouter();
   const { videoSrc, overlayOpacity, paragraph, heading, buttonText } =
     transformBusinessData;
 
@@ -38,7 +41,9 @@ export default function TransformBusiness() {
               {heading}
             </h2>
 
-            <button className="mt-4 flex items-center gap-2 text-white font-semibold group cursor-pointer text-xl">
+            <button 
+              onClick={() => router.push("/contact#contact-form")}
+              className="mt-4 flex items-center gap-2 text-white font-semibold group cursor-pointer text-xl">
               <span>{buttonText}</span>
               <FiArrowRight
                 size={30}

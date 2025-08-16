@@ -2,8 +2,10 @@
 import { FiArrowRight, FiCheck } from "react-icons/fi";
 import Image from "next/image";
 import { sections } from "../../../Const";
+import { useRouter } from "next/navigation";
 
 export default function Innovation() {
+  const router = useRouter();
   return (
     <section className="bg-black text-white px-6 md:px-16 py-20">
       {/* Heading */}
@@ -70,7 +72,11 @@ export default function Innovation() {
                 ))}
               </ul>
 
-              <button className="bg-[#57BFFF] hover:bg-[#3ba7dd] text-white font-semibold px-6 py-3 rounded-2xl cursor-pointer flex items-center gap-2 transition-all duration-300 group w-max">
+              <button 
+
+                onClick={() => router.push('/contact#contact-form')}
+                
+                className="bg-[#57BFFF] hover:bg-[#3ba7dd] text-white font-semibold px-6 py-3 rounded-2xl cursor-pointer flex items-center gap-2 transition-all duration-300 group w-max">
                 Get Started
                 <FiArrowRight
                   size={16}

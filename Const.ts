@@ -87,7 +87,7 @@ export const PROCESS_STEPS = [
     title: "Understand Your Vision",
     desc: "We work closely with you to define goals and success criteria.",
     img: "/define.png",
-    cta: "Learn More",
+    cta: "Get Started",
   },
   {
     phase: "Design Phase",
@@ -95,7 +95,7 @@ export const PROCESS_STEPS = [
     title: "Shape the Solution",
     desc: "Our designers create a solution blueprint that meets your needs.",
     img: "/design.png",
-    cta: "See Designs",
+    cta: "Get Started",
   },
   {
     phase: "Develop Phase",
@@ -103,7 +103,7 @@ export const PROCESS_STEPS = [
     title: "Build with Precision",
     desc: "We build high-quality solutions with precision and efficiency.",
     img: "/develope.png",
-    cta: "Explore Build",
+    cta: "Get Started",
   },
   {
     phase: "Deploy Phase",

@@ -1,7 +1,9 @@
 "use client";
 import { FiArrowRight } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 
 export default function CareersHero() {
+  const router = useRouter();
   return (
     <section className="relative bg-black text-white min-h-screen flex items-center px-4 py-16 md:py-20">
       <div className="w-full">
@@ -26,12 +28,16 @@ export default function CareersHero() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8 flex-wrap">
           {/* Get In Touch */}
-          <button className="bg-[#57BFFF] text-white font-semibold px-6 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-[15px]">
+          <button 
+            onClick={() => router.push('/contact#contact-form')}
+            className="bg-[#57BFFF] text-white font-semibold px-6 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-[15px]">
             Get In Touch
           </button>
 
           {/* About Us */}
-          <button className="group flex items-center gap-3 border border-gray-600 px-6 py-3 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer text-[15px]">
+          <button 
+            onClick={() => router.push('/about')}
+            className="group flex items-center gap-3 border border-gray-600 px-6 py-3 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer text-[15px]">
             About Us
             <span className="relative flex items-center justify-center">
               <span className="absolute w-7 h-7 rounded-full bg-white/10 group-hover:bg-black/10 transition"></span>

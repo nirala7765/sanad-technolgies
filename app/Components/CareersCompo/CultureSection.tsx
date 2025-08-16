@@ -2,8 +2,10 @@
 
 import { FaBalanceScale, FaUsers, FaBolt } from "react-icons/fa";
 import { MdOutlineWork } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 export default function CultureSection() {
+  const router = useRouter();
   const cultureItems = [
     {
       icon: <FaBalanceScale size={32} />,
@@ -59,7 +61,7 @@ export default function CultureSection() {
           Join us and shape the future of technology
         </p>
         <a
-          href="#apply"
+          href="/contact#contact-form"
           className="px-6 py-2 bg-[#57BFFF] hover:bg-[#3ba7dd] rounded-full font-medium transition-all duration-300 hover:scale-105"
         >
           Apply Now

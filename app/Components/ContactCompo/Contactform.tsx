@@ -49,7 +49,7 @@ export default function Contactform() {
 
   return (
     <section
-      id="contact"
+      id="contact-form"
       className="bg-black text-white px-6 py-12 pt-[100px] md:pt-[200px] md:px-20 lg:px-32"
       style={{ scrollMarginTop: "120px" }}
     >
