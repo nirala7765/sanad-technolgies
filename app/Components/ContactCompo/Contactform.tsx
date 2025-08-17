@@ -25,10 +25,14 @@ export default function Contactform() {
     message: "",
   });
 
+  const [successMsg, setSuccessMsg] = useState("");
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" }); // clear error on change
   };
 
   const handleClear = () => {
@@ -40,11 +44,44 @@ export default function Contactform() {
       category: "",
       message: "",
     });
+    setErrors({});
+    setSuccessMsg("");
   };
+
+  const validateForm = () => {
+  const newErrors: { [key: string]: string } = {};
+  if (!form.name.trim()) newErrors.name = "Name is required";
+  if (!form.email.trim()) newErrors.email = "Email is required";
+  else if (!/\S+@\S+\.\S+/.test(form.email))
+    newErrors.email = "Invalid email format";
+  if (!form.phone.trim()) newErrors.phone = "Phone is required";
+  else if (!/^\d{7,15}$/.test(form.phone))
+    newErrors.phone = "Phone number must be 7–15 digits";
+  if (!form.category) newErrors.category = "Please select a category";
+  if (!form.message.trim()) newErrors.message = "Message is required";
+  return newErrors;
+};
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      setSuccessMsg("");
+      return;
+    }
+
     console.log("Form submitted:", form);
+    setSuccessMsg("Your response has been submitted successfully!");
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      countryCode: "+91",
+      category: "",
+      message: "",
+    });
   };
 
   return (
@@ -59,6 +96,13 @@ export default function Contactform() {
           Let’s Build Something That Works <br /> for You!
         </h2>
       </div>
+
+      {/* Success message */}
+      {successMsg && (
+        <div className="text-center mb-6 text-green-400 font-semibold">
+          {successMsg}
+        </div>
+      )}
 
       {/* Form */}
       <form
@@ -76,6 +120,7 @@ export default function Contactform() {
             placeholder="Enter Your Name"
             className="w-full bg-transparent border-b border-gray-500 focus:border-[#57BFFF] outline-none py-2"
           />
+          {errors.name && <p className="text-red-400 text-sm">{errors.name}</p>}
         </div>
 
         {/* Category */}
@@ -92,6 +137,9 @@ export default function Contactform() {
             <option value="app">App Development</option>
             <option value="design">UI/UX Design</option>
           </select>
+          {errors.category && (
+            <p className="text-red-400 text-sm">{errors.category}</p>
+          )}
         </div>
 
         {/* Email */}
@@ -105,6 +153,7 @@ export default function Contactform() {
             placeholder="Enter Your Email"
             className="w-full bg-transparent border-b border-gray-500 focus:border-[#57BFFF] outline-none py-2"
           />
+          {errors.email && <p className="text-red-400 text-sm">{errors.email}</p>}
         </div>
 
         {/* Message */}
@@ -118,6 +167,9 @@ export default function Contactform() {
             rows={5}
             className="w-full bg-transparent border-b border-gray-500 focus:border-[#57BFFF] outline-none py-2 resize-none"
           />
+          {errors.message && (
+            <p className="text-red-400 text-sm">{errors.message}</p>
+          )}
         </div>
 
         {/* Phone */}
@@ -145,6 +197,9 @@ export default function Contactform() {
               className="w-full bg-transparent outline-none py-2"
             />
           </div>
+          {errors.phone && (
+            <p className="text-red-400 text-sm">{errors.phone}</p>
+          )}
         </div>
 
         {/* Buttons */}
@@ -152,13 +207,13 @@ export default function Contactform() {
           <button
             type="button"
             onClick={handleClear}
-            className="px-6 py-2 rounded-lg border border-[#57BFFF] hover:bg-gray-800"
+            className="px-6 py-2 rounded-lg border border-[#57BFFF] hover:bg-gray-800 cursor-pointer"
           >
             Clear
           </button>
           <button
             type="submit"
-            className="px-6 py-2 rounded-lg bg-[#57BFFF] hover:bg-[#3ba7dd]  text-black font-semibold"
+            className="px-6 py-2 rounded-lg bg-[#57BFFF] hover:bg-[#3ba7dd] text-white font-semibold cursor-pointer"
           >
             Submit
           </button>

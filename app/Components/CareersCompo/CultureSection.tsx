@@ -2,10 +2,10 @@
 
 import { FaBalanceScale, FaUsers, FaBolt } from "react-icons/fa";
 import { MdOutlineWork } from "react-icons/md";
-import { useRouter } from "next/navigation";
+
 
 export default function CultureSection() {
-  const router = useRouter();
+  
   const cultureItems = [
     {
       icon: <FaBalanceScale size={32} />,
@@ -42,7 +42,7 @@ export default function CultureSection() {
   return (
     <section className="bg-black text-white px-6 py-12 space-y-12">
       {/* Our Culture Title */}
-      <h2 className="text-center text-3xl sm:text-4xl font-bold">Our Culture</h2>
+      <h2 className="text-center text-2xl md:text-4xl lg:text-[55px] font-bold">Our Culture</h2>
 
       {/* Culture Items */}
       <div className="grid gap-10 sm:grid-cols-2 max-w-6xl mx-auto">

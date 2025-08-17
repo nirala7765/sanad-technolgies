@@ -136,6 +136,7 @@ export const sections = [
       "Provide a practical roadmap for AI adoption",
       "Ensure solutions are scalable and secure",
       "No-obligation, no-cost assessment",
+      
     ],
     img: "/ai1.png",
   },

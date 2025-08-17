@@ -1,15 +1,24 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaWhatsapp, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Careers", path: "/careers" },
+  ];
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white space-y-6">
       {/* Logo */}
       <div className="flex flex-col items-center">
         <div className="w-28 h-24 rounded-full flex items-center justify-center">
-          {/* Replace this with your actual logo image */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/logo.png"
@@ -25,19 +34,20 @@ export default function Footer() {
 
       {/* Navigation */}
       <div className="flex flex-col items-center space-y-2">
-        <p className="font-semibold">Explore</p>
-        <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-          Home
-        </Link>
-        <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-          About
-        </Link>
-        <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-          Services
-        </Link>
-        <Link href="/careers" className="text-gray-400 hover:text-white transition-colors">
-          Careers
-        </Link>
+        <p className="font-semibold mb-4">Explore</p>
+        {navLinks.map((link) => (
+          <Link
+            key={link.name}
+            href={link.path}
+            className={`transition-colors ${
+              pathname === link.path
+                ? "text-[#57BFFF] font-semibold"
+                : "text-gray-400 hover:text-white"
+            }`}
+          >
+            {link.name}
+          </Link>
+        ))}
       </div>
 
       {/* Social Media Icons with Magnify on Hover */}

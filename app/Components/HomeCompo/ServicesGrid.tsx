@@ -14,10 +14,10 @@ export default function ServicesGrid() {
       className="bg-black text-white px-4 py-16">
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-2xl md:text-4xl font-bold mb-4">
+        <h2 className="text-2xl md:text-4xl lg:text-[55px] font-bold mb-4">
           What We Can Do for You
         </h2>
-        <p className="text-[#808080] text-[18px] md:text-base">
+        <p className="text-[#808080] text-[18px] md:text-[20px]">
           We deliver end-to-end technology services that solve real problems,
           boost efficiency, and prepare your business for what’s next.
         </p>
@@ -82,7 +82,7 @@ function ServiceCard({
       </div>
       <div className="px-4 pb-4 flex flex-col flex-grow justify-center text-center">
         <h3 className="font-semibold text-lg mb-2 md:text-3xl">{title}</h3>
-        <p className="text-[#ABABAB] text-sm">{desc}</p>
+        <p className="text-[#ABABAB] text-md px-6">{desc}</p>
       </div>
     </div>
   );

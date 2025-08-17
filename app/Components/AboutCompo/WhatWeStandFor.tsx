@@ -28,8 +28,7 @@ const blocks = [
 ];
 
 export default function WhatWeStandFor() {
-  const [activeId] = useState(1); // default active card
-  const [hoverId, setHoverId] = useState<number | null>(null); // track hover
+  const [hoverId, setHoverId] = useState<number | null>(null);
 
   return (
     <section
@@ -42,7 +41,7 @@ export default function WhatWeStandFor() {
     >
       <h2
         className="
-          text-2xl md:text-4xl 
+          text-2xl md:text-4xl lg:text-[55px]
           font-bold mb-8 lg:mb-28 text-center
         "
       >
@@ -56,10 +55,7 @@ export default function WhatWeStandFor() {
         "
       >
         {blocks.map((block) => {
-          // if hoverId exists → only hovered card is active
-          // otherwise → default activeId (card 1)
-          const isActive =
-            hoverId !== null ? block.id === hoverId : block.id === activeId;
+          const isActive = block.id === hoverId;
 
           return (
             <div
@@ -67,7 +63,7 @@ export default function WhatWeStandFor() {
               onMouseEnter={() => setHoverId(block.id)}
               onMouseLeave={() => setHoverId(null)}
               className={`
-                group cursor-pointer rounded-lg
+                group  rounded-lg
                 p-6 md:p-7 lg:p-8
                 bg-[#1A1A1A] transition-all duration-300 border-2
                 flex flex-col justify-between

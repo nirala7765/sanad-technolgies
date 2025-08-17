@@ -13,7 +13,6 @@ const NavBar = () => {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Careers", path: "/careers" },
-    
   ];
 
   return (
@@ -30,7 +29,6 @@ const NavBar = () => {
               height={40}
               className="object-contain"
             />
-
           </Link>
 
           {/* Desktop Navigation */}
@@ -52,10 +50,11 @@ const NavBar = () => {
         </div>
 
         {/* Right: Contact Button & Mobile Menu Icon */}
-        <div className="flex items-center ">
+        <div className="flex items-center">
+          {/* Desktop Contact */}
           <Link
             href="/contact"
-            className="bg-[#57BFFF] hover:bg-[#3ba7dd]  text-white px-5 py-2 rounded-lg font-semibold transition hidden md:inline-block"
+            className="hidden md:inline-block bg-[#57BFFF] hover:bg-[#3ba7dd] text-white px-5 py-2 rounded-lg font-semibold transition"
           >
             Contact Us
           </Link>
@@ -119,13 +118,18 @@ const NavBar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              onClick={() => setMenuOpen(false)}
-              className="bg-[#57BFFF] hover:bg-[#3ba7dd]  text-white px-5 py-2 rounded-lg font-semibold transition"
-            >
-              Contact Us
-            </Link>
+            {/* Mobile Contact Button */}
+{/* Mobile Contact Button */}
+<div className="flex justify-center pt-2">
+  <Link
+    href="/contact"
+    onClick={() => setMenuOpen(false)}
+    className="w-1/3 text-center bg-[#57BFFF] hover:bg-[#3ba7dd] text-white py-2 rounded-full font-semibold transition shadow-md"
+  >
+    Contact Us
+  </Link>
+</div>
+
           </nav>
         </div>
       )}

@@ -11,7 +11,7 @@ export default function CareersHero() {
 
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h1 className="text-3xl md:text-5xl font-bold mb-8 leading-snug">
+          <h1 className="text-2xl md:text-4xl lg:text-[55px] font-bold mb-8 leading-snug">
             Build Your Future with <br />{" "}
             <span className="text-[#57BFFF]">Sanad Technologies</span>
           </h1>
@@ -43,7 +43,7 @@ export default function CareersHero() {
               <span className="absolute w-7 h-7 rounded-full bg-white/10 group-hover:bg-black/10 transition"></span>
               <FiArrowRight
                 size={18}
-                className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
+                className="relative z-10 transition-transform duration-300 "
               />
             </span>
           </button>

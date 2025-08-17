@@ -9,11 +9,11 @@ export default function AIRoadmap() {
     <section id="ai-roadmap" className="bg-black text-white flex flex-col justify-center items-center px-6 md:px-12 lg:px-20 lg:min-h-[100svh]">
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-2xl md:text-4xl font-semibold leading-snug mb-6">
+        <h2 className="text-2xl md:text-4xl lg:text-[55px]  font-semibold leading-snug mb-6">
           Want AI to Work for You <br className="hidden md:block" />
           but Can’t See the Path?
         </h2>
-        <p className="text-[#808080] text-base md:text-lg">
+        <p className="text-[#808080] text-base md:text-xl">
           We’ll quickly identify where AI can make the biggest impact in your
           business and give you a simple, tailored roadmap to get started. No
           jargon, no guesswork, <span className="font-semibold">no cost</span>.
@@ -35,10 +35,10 @@ export default function AIRoadmap() {
                 className="object-cover rounded-xl"
               />
             </div>
-            <h3 className="text-lg  font-semibold mb-3">
+            <h3 className="text-xl font-semibold mb-3">
               {step.title}
             </h3>
-            <p className="text-[#808080] text-[17px] ">{step.desc}</p>
+            <p className="text-[#808080] text-[18px] ">{step.desc}</p>
           </div>
         ))}
       </div>
