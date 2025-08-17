@@ -73,16 +73,20 @@ function ServiceCard({
 }) {
   return (
     <div
-      className={`bg-[#1a1a1a] flex-shrink-0 w-full ${widthClass} h-[300px] md:h-[441px] rounded-lg overflow-hidden flex flex-col`}
+      className={`bg-[#1a1a1a] flex-shrink-0 w-full ${widthClass} h-auto md:h-[441px] rounded-lg overflow-hidden flex flex-col`}
     >
-      <div className="py-6 px-16">
+      <div className="py-4 md:py-6 px-4 md:px-16">
         <div className="relative w-full h-[150px] md:h-[250px] rounded-lg overflow-hidden">
           <Image src={img} alt={title} fill className="object-cover" />
         </div>
       </div>
-      <div className="px-4 pb-4 flex flex-col flex-grow justify-center text-center">
-        <h3 className="font-semibold text-lg mb-2 md:text-3xl">{title}</h3>
-        <p className="text-[#ABABAB] text-md px-6">{desc}</p>
+      <div className="px-4 md:px-4 flex flex-col flex-grow justify-center text-center">
+        <h3 className="font-semibold text-lg md:text-3xl mb-2">{title}</h3>
+        <p className="text-[#ABABAB] text-sm md:text-md break-words md:px-6">
+          {desc}
+        </p>
+        {/* Add 20px bottom space on mobile */}
+        <div className="h-5 md:hidden" />
       </div>
     </div>
   );

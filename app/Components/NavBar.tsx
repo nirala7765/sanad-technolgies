@@ -124,7 +124,7 @@ const NavBar = () => {
   <Link
     href="/contact"
     onClick={() => setMenuOpen(false)}
-    className="w-1/3 text-center bg-[#57BFFF] hover:bg-[#3ba7dd] text-white py-2 rounded-full font-semibold transition shadow-md"
+    className="w-1/3 text-center bg-[#57BFFF] hover:bg-[#3ba7dd] text-white py-2 rounded-2xl font-semibold transition shadow-md"
   >
     Contact Us
   </Link>

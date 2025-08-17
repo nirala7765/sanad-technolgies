@@ -87,7 +87,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <p className="text-[#C9D4D8] text-lg mt-16">
+      <p className="text-[#C9D4D8] text-lg mt-16 text-center">
         © 2025 Sanad Technologies, All Rights Reserved.
       </p>
     </div>

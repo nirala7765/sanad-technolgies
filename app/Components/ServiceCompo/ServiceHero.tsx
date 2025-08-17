@@ -8,7 +8,7 @@ export default function ServiceHero() {
     <section className="relative bg-black text-white min-h-screen flex items-center px-4 py-16 md:py-20">
       <div className="w-full space-y-16">
         {/* Top Pill CTA */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-9">
           <div
             onClick={() => {
               const el = document.getElementById("ai-roadmap");

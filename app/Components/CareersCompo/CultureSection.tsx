@@ -56,7 +56,7 @@ export default function CultureSection() {
       </div>
 
       {/* Call to Action */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-16 bg-black border-t border-gray-800 pt-16 max-w-6xl mx-auto">
+      <div className="flex flex-col sm:flex-row items-center justify-center md:gap-16 bg-black border-t border-gray-800 pt-16 max-w-6xl mx-auto">
         <p className="text-center sm:text-left text-lg font-medium mb-4 sm:mb-0">
           Join us and shape the future of technology
         </p>

@@ -72,7 +72,7 @@ export default function ProcessSteps() {
                       {step.cta && (
                         <button
                           onClick={() => router.push("/contact#contact-form")}
-                          className={`bg-[#57BFFF] hover:bg-[#42aee6] text-white px-6 py-3 rounded-lg font-semibold w-fit transition-all duration-300 ${
+                          className={`bg-[#57BFFF] hover:bg-[#42aee6] text-white px-6 py-3 rounded-2xl font-semibold w-fit transition-all duration-300 ${
                             isActive
                               ? "opacity-100 translate-y-0"
                               : "opacity-0 translate-y-2"

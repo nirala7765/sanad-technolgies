@@ -35,7 +35,7 @@ export default function Innovation() {
                   : "justify-center md:justify-start" // if image is on the left
               }`}
             >
-              <div className="relative w-full max-w-[513px] md:h-[550px] h-[300px] rounded-xl overflow-hidden">
+              <div className="relative w-full max-w-[513px] md:h-[650px] h-[300px] rounded-xl overflow-hidden">
                 <Image
                   src={sec.img}
                   alt={sec.title}
@@ -48,29 +48,29 @@ export default function Innovation() {
             </div>
 
             {/* Content */}
-            <div className="w-full md:w-[50%] flex flex-col justify-center">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full">
+            <div className="w-full md:w-[50%] flex flex-col justify-center ">
+              <div className="flex items-center gap-3 mb-4 space-y-6">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full mt-6">
                   <Image
                     src={sec.icon}
                     alt={`${sec.title} icon`}
-                    width={24}
-                    height={24}
+                    width={80}
+                    height={80}
                   />
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold">
+                <h3 className="text-xl md:text-3xl font-semibold">
                   {sec.title}
                 </h3>
               </div>
 
-              <p className="text-white text-lg mb-4">{sec.description}</p>
+              <p className="text-white text-2xl mb-6 ">{sec.description}</p>
 
               {/* Points */}
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-6 mb-6 mt-6">
                 {sec.points.map((point, pIdx) => (
                   <li
                     key={pIdx}
-                    className="flex items-start gap-3 text-gray-300"
+                    className="flex items-start gap-3 text-[#FFFFFF] text-xl"
                   >
                     <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-[#1E1E1E]">
                       <FiCheck className="text-white text-sm" />
@@ -82,7 +82,7 @@ export default function Innovation() {
 
               <button
                 onClick={() => router.push("/contact#contact-form")}
-                className="bg-[#57BFFF] hover:bg-[#3ba7dd] text-white font-semibold px-6 py-3 rounded-2xl cursor-pointer flex items-center gap-2 transition-all duration-300 group w-max"
+                className="bg-[#57BFFF] hover:bg-[#3ba7dd] text-white font-semibold px-6 py-3 rounded-2xl cursor-pointer flex items-center gap-2 transition-all duration-300 group w-max mt-6"
               >
                 Get Started
                 <FiArrowRight
