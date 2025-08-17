@@ -32,7 +32,7 @@ export default function ServiceHero() {
 
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto px-2">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[55px] font-bold mb-8 leading-tight text-center">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[58px] font-bold mb-8 leading-tight text-center">
             <span className="block">Explore What We Can Do</span>
             <span className="block">
               for Your Business

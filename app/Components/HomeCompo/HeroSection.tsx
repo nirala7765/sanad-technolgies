@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 export default function HeroSection() {
   const router = useRouter();
   return (
-    <section className="relative bg-black text-white min-h-screen flex items-center px-4 py-16 md:py-20">
+    <section className="relative bg-black text-white min-h-screen flex items-center px-2 py-16 md:py-20">
       {/* Increased gap between contents */}
       <div className="w-full  space-y-16">
         {/* Top Pill CTA */}
@@ -33,7 +33,7 @@ export default function HeroSection() {
 
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto  px-2">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[55px] font-bold mb-8 leading-tight text-center">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[58px] font-bold mb-8 leading-tight text-center">
             <span className="block">
               Make Technology Work for Your
             </span>

@@ -11,7 +11,7 @@ export default function CareersHero() {
 
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h1 className="text-2xl md:text-4xl lg:text-[55px] font-bold mb-8 leading-snug">
+          <h1 className="text-2xl md:text-4xl lg:text-[58px] font-bold mb-8 leading-snug">
             Build Your Future with <br />{" "}
             <span className="text-[#57BFFF]">Sanad Technologies</span>
           </h1>

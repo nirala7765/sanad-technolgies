@@ -17,7 +17,7 @@ const NavBar = () => {
 
   return (
     <header className="bg-black text-white fixed top-0 left-0 w-full z-50 shadow-md">
-      <div className="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-6 lg:px-1 py-4 flex items-center justify-between">
         {/* Left: Logo + Links */}
         <div className="flex items-center space-x-8">
           {/* Logo */}
@@ -32,12 +32,12 @@ const NavBar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 ">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.path}
-                className={`text-base font-medium transition-colors duration-200 ${
+                className={`text-base  transition-colors duration-200 font-bold ${
                   pathname === link.path
                     ? "text-[#57BFFF]"
                     : "text-gray-300 hover:text-[#57BFFF]"
@@ -54,7 +54,7 @@ const NavBar = () => {
           {/* Desktop Contact */}
           <Link
             href="/contact"
-            className="hidden md:inline-block bg-[#57BFFF] hover:bg-[#3ba7dd] text-white px-5 py-2 rounded-lg font-semibold transition"
+            className="hidden md:inline-block bg-[#57BFFF] hover:bg-[#3ba7dd] text-white px-5 py-2 rounded-xl font-semibold transition"
           >
             Contact Us
           </Link>

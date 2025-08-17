@@ -9,8 +9,8 @@ export default function Innovation() {
   return (
     <section className="bg-black text-white px-6 md:px-16 py-20">
       {/* Heading */}
-      <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-2xl md:text-4xl lg:text-[55px] font-bold">
+      <div className="text-center max-w-3xl mx-auto mb-16 space-y-11">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
           Ignite Your Potential with AI-Driven Innovations
         </h2>
         <p className="mt-4 text-[#808080]">

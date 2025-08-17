@@ -5,7 +5,7 @@ export default function OurStorySection() {
   return (
     <section id="our-story" className="min-h-screen bg-black text-white flex flex-col justify-center px-6 md:px-12 py-16">
       {/* Section Title */}
-      <h2 className="text-center text-2xl md:text-4xl lg:text-[55px] font-bold mb-12">
+      <h2 className="text-center text-2xl md:text-4xl lg:text-5xl font-bold mb-12">
         {OUR_STORY.sectionTitle}
       </h2>
 

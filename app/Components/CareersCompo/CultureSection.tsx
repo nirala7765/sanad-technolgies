@@ -62,7 +62,7 @@ export default function CultureSection() {
         </p>
         <a
           href="/contact#contact-form"
-          className="px-6 py-2 bg-[#57BFFF] hover:bg-[#3ba7dd] rounded-full font-medium transition-all duration-300 hover:scale-105"
+          className="px-6 py-2 bg-[#57BFFF] hover:bg-[#3ba7dd] rounded-2xl font-medium transition-all duration-300 hover:scale-105"
         >
           Apply Now
         </a>

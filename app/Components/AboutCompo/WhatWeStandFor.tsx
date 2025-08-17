@@ -41,7 +41,7 @@ export default function WhatWeStandFor() {
     >
       <h2
         className="
-          text-2xl md:text-4xl lg:text-[55px]
+          text-2xl md:text-4xl lg:text-5xl
           font-bold mb-8 lg:mb-28 text-center
         "
       >

@@ -50,7 +50,7 @@ export default function Footer() {
         ))}
       </div>
 
-      {/* Social Media Icons with Magnify on Hover */}
+      {/* Social Media Icons */}
       <div className="flex space-x-6 mt-4">
         <a
           href="https://wa.me/1234567890?text=Hello%20Sanad%20Technologies"
@@ -85,6 +85,11 @@ export default function Footer() {
           <FaLinkedin size={24} />
         </a>
       </div>
+
+      {/* Copyright */}
+      <p className="text-[#C9D4D8] text-lg mt-16">
+        © 2025 Sanad Technologies, All Rights Reserved.
+      </p>
     </div>
   );
 }

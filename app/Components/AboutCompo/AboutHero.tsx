@@ -28,7 +28,7 @@ export default function AboutHero() {
 
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto px-2">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[55px] font-bold mb-8 leading-tight text-center">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[58px] font-bold mb-8 leading-tight text-center">
             Who We Are &amp; Why We Do It
           </h1>
         </div>
@@ -70,7 +70,7 @@ export default function AboutHero() {
         </div>
 
         {/* Hero Video */}
-        <div className="max-w-6xl mx-auto rounded-2xl overflow-hidden h-[441px] w-full">
+        <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden h-[250px] sm:h-[350px] md:h-[441px]">
           <video
             src={videos.aboutHero}
             autoPlay

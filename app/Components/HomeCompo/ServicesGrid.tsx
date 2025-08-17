@@ -14,7 +14,7 @@ export default function ServicesGrid() {
       className="bg-black text-white px-4 py-16">
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-2xl md:text-4xl lg:text-[55px] font-bold mb-4">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
           What We Can Do for You
         </h2>
         <p className="text-[#808080] text-[18px] md:text-[20px]">
