@@ -29,12 +29,12 @@ export default function Footer() {
             />
           </Link>
         </div>
-        <h1 className="mt-4 text-2xl font-bold">Sanad Technologies</h1>
+        <h1 className="mt-4 text-3xl font-bold">Sanad Technologies</h1>
       </div>
 
       {/* Navigation */}
       <div className="flex flex-col items-center space-y-2">
-        <p className="font-semibold mb-4">Explore</p>
+        <p className="font-semibold mb-4 text-2xl">Explore</p>
         {navLinks.map((link) => (
           <Link
             key={link.name}
@@ -42,7 +42,7 @@ export default function Footer() {
             className={`transition-colors ${
               pathname === link.path
                 ? "text-[#57BFFF] font-semibold"
-                : "text-gray-400 hover:text-white"
+                : "text-[#808080] hover:text-white"
             }`}
           >
             {link.name}
@@ -56,7 +56,7 @@ export default function Footer() {
           href="https://wa.me/1234567890?text=Hello%20Sanad%20Technologies"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-[#57BFFF] transform hover:scale-125 transition-all duration-300"
+          className="text-[#C9D4D8] hover:text-[#57BFFF] transform hover:scale-125 transition-all duration-300"
         >
           <FaWhatsapp size={24} />
         </a>
@@ -64,7 +64,7 @@ export default function Footer() {
           href="https://twitter.com/yourhandle"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-[#57BFFF] transform hover:scale-125 transition-all duration-300"
+          className="text-[#C9D4D8] hover:text-[#57BFFF] transform hover:scale-125 transition-all duration-300"
         >
           <FaTwitter size={24} />
         </a>
@@ -72,7 +72,7 @@ export default function Footer() {
           href="https://instagram.com/yourhandle"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-[#57BFFF] transform hover:scale-125 transition-all duration-300"
+          className="text-[#C9D4D8] hover:text-[#57BFFF] transform hover:scale-125 transition-all duration-300"
         >
           <FaInstagram size={24} />
         </a>
@@ -80,14 +80,14 @@ export default function Footer() {
           href="https://linkedin.com/in/yourhandle"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-[#57BFFF] transform hover:scale-125 transition-all duration-300"
+          className="text-[#C9D4D8] hover:text-[#57BFFF] transform hover:scale-125 transition-all duration-300"
         >
           <FaLinkedin size={24} />
         </a>
       </div>
 
       {/* Copyright */}
-      <p className="text-[#C9D4D8] text-lg mt-16 text-center">
+      <p className="text-[#C9D4D8] text-lg mt-26 text-center">
         © 2025 Sanad Technologies, All Rights Reserved.
       </p>
     </div>

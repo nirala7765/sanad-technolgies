@@ -40,12 +40,12 @@ export default function CultureSection() {
   ];
 
   return (
-    <section className="bg-black text-white px-6 py-12 space-y-12">
+    <section className="bg-black text-white px-6 md:px-12 py-12 space-y-12">
       {/* Our Culture Title */}
-      <h2 className="text-center text-2xl md:text-4xl lg:text-[55px] font-bold">Our Culture</h2>
+      <h2 className="text-center text-2xl md:text-4xl lg:text-[55px] font-bold md:pb-11">Our Culture</h2>
 
       {/* Culture Items */}
-      <div className="grid gap-10 sm:grid-cols-2 max-w-6xl mx-auto">
+      <div className="grid gap-10 sm:grid-cols-2 md:px-7 mx-auto">
         {cultureItems.map((item, idx) => (
           <div key={idx} className="flex flex-col space-y-4">
             <div className="text-white">{item.icon}</div>
@@ -56,7 +56,7 @@ export default function CultureSection() {
       </div>
 
       {/* Call to Action */}
-      <div className="flex flex-col sm:flex-row items-center justify-center md:gap-16 bg-black border-t border-gray-800 pt-16 max-w-6xl mx-auto">
+      <div className="flex flex-col sm:flex-row items-center justify-center md:gap-16 bg-black border-t border-gray-800 pt-16 md:px-7 mx-auto">
         <p className="text-center sm:text-left text-lg font-medium mb-4 sm:mb-0">
           Join us and shape the future of technology
         </p>

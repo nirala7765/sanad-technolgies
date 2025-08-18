@@ -11,13 +11,13 @@ export default function ServicesGrid() {
   return (
     <section 
       id="services-grid"
-      className="bg-black text-white px-4 py-16">
+      className="bg-black text-white w-full px-6 md:px-12  py-12 md:pt-50">
       {/* Heading */}
-      <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
+      <div className="text-center  mx-auto mb-16 space-y-8">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
           What We Can Do for You
         </h2>
-        <p className="text-[#808080] text-[18px] md:text-[20px]">
+        <p className="text-[#808080] text-[18px] md:text-[20px] md:px-90">
           We deliver end-to-end technology services that solve real problems,
           boost efficiency, and prepare your business for what’s next.
         </p>

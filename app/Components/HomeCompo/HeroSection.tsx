@@ -5,43 +5,37 @@ import { useRouter } from "next/navigation";
 export default function HeroSection() {
   const router = useRouter();
   return (
-    <section className="relative bg-black text-white min-h-screen flex items-center px-2 py-16 md:py-20">
-      {/* Increased gap between contents */}
-      <div className="w-full  space-y-16">
+    <section className="relative bg-black text-white min-h-screen flex items-center px-6 md:px-12  py-16 md:py-20 w-full">
+      {/* Keep consistent spacing */}
+      <div className="w-full space-y-20">
         {/* Top Pill CTA */}
-        <div className="flex justify-center ">
+        <div className="flex justify-center mt-4">
           <div
             onClick={() => {
               const el = document.getElementById("ai-roadmap");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group inline-flex items-center gap-2 border border-[#57BFFF] rounded-full px-5 py-2 text-sm md:text-base cursor-pointer hover:bg-[#57BFFF]/10 transition"
+            className="group inline-flex items-center gap-3 border border-[#57BFFF] rounded-full px-6 py-3 text-sm md:text-base cursor-pointer hover:bg-[#57BFFF]/10 transition"
           >
             <span className="font-bold text-white">Looking for AI?</span>
             <span className="text-white">|</span>
             <span className="flex items-center gap-2 font-medium text-[#9D9D9D]">
               Click Here
-              <span className="relative flex items-center justify-center">
-                <FiArrowRight
-                  size={16}
-                  className="relative z-10 text-[#9D9D9D]"
-                />
-              </span>
+              <FiArrowRight
+                size={18}
+                className="relative z-10 text-[#9D9D9D] group-hover:translate-x-1 transition-transform duration-300"
+              />
             </span>
           </div>
         </div>
 
         {/* Heading */}
-        <div className="text-center max-w-4xl mx-auto  px-2">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[58px] font-bold mb-8 leading-tight text-center">
-            <span className="block">
-              Make Technology Work for Your
-            </span>
+        <div className="text-center mx-auto px-2 sm:px-4">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[58px] font-extrabold leading-tight">
+            <span className="block">Make Technology Work for Your</span>
             <span className="block">
               Business with{" "}
-              <span className="text-[#57BFFF]">
-                Sanad Tech
-              </span>
+              <span className="text-[#57BFFF]">Sanad Tech</span>
             </span>
           </h1>
         </div>
@@ -69,17 +63,17 @@ export default function HeroSection() {
               <span className="absolute w-7 h-7 rounded-full bg-white/10 group-hover:bg-black/10 transition"></span>
               <FiArrowRight
                 size={18}
-                className="relative z-10 transition-transform duration-300 "
+                className="relative z-10 transition-transform duration-300"
               />
             </span>
           </button>
         </div>
 
-        {/* Description below buttons */}
-        <div className="text-center max-w-2xl mx-auto px-4">
-          <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed pt-5">
+        {/* Description */}
+        <div className="text-center max-w-3xl mx-auto px-2 sm:px-4">
+          <p className="text-[#808080] text-base sm:text-lg md:text-xl leading-relaxed">
             We help you solve challenges, improve efficiency, and build the
-            right technology foundation for lasting growth.
+            right <br /> technology foundation for lasting growth.
           </p>
         </div>
       </div>

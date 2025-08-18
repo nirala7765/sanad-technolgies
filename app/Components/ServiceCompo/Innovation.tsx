@@ -7,13 +7,13 @@ import { useRouter } from "next/navigation";
 export default function Innovation() {
   const router = useRouter();
   return (
-    <section className="bg-black text-white px-6 md:px-16 py-20">
+    <section className="bg-black text-white px-6 md:px-12 py-12 md:pt-50">
       {/* Heading */}
-      <div className="text-center max-w-3xl mx-auto mb-16 space-y-11">
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
+      <div className="text-center  mx-auto mb-20 space-y-8">
+        <h2 className="text-3xl md:text-5xl  font-extrabold leading-tight md:px-88">
           Ignite Your Potential with AI-Driven Innovations
         </h2>
-        <p className="mt-4 text-[#808080]">
+        <p className="mt-4 text-[#A0A0A0] text-lg md:text-xl md:px-88">
           Fuel your business growth with AI solutions that are dynamic, adaptive, and tailored to match your ambitions.
         </p>
       </div>
@@ -23,56 +23,58 @@ export default function Innovation() {
         {sections.map((sec, idx) => (
           <div
             key={idx}
-            className={`flex flex-col md:flex-row items-center gap-8 py-8 md:py-12 rounded-2xl ${
+            className={`flex flex-col md:flex-row items-center gap-12 lg:gap-20 py-12 md:py-16 rounded-2xl ${
               idx % 2 === 0 ? "md:flex-row-reverse" : ""
             }`}
           >
             {/* Image Container */}
             <div
-              className={`w-full md:w-[50%] flex-shrink-0 flex ${
+              className={`w-full md:w-1/2 flex-shrink-0 flex ${
                 idx % 2 === 0
-                  ? "justify-center md:justify-end" // if image is on the right
-                  : "justify-center md:justify-start" // if image is on the left
+                  ? "justify-center md:justify-end"
+                  : "justify-center md:justify-start"
               }`}
             >
-              <div className="relative w-full max-w-[513px] md:h-[650px] h-[300px] rounded-xl overflow-hidden">
+              <div className="relative w-full max-w-[540px] md:h-[650px] h-[300px] rounded-2xl overflow-hidden shadow-lg">
                 <Image
                   src={sec.img}
                   alt={sec.title}
                   fill
                   style={{ objectFit: "cover" }}
-                  className="rounded-xl"
-                  sizes="(max-width: 768px) 100vw, 513px"
+                  className="rounded-2xl"
+                  sizes="(max-width: 768px) 100vw, 540px"
                 />
               </div>
             </div>
 
             {/* Content */}
-            <div className="w-full md:w-[50%] flex flex-col justify-center ">
-              <div className="flex items-center gap-3 mb-4 space-y-6">
-                <div className="w-10 h-10 flex items-center justify-center rounded-full mt-6">
+            <div className="w-full md:w-1/2 flex flex-col justify-center">
+              {/* Title */}
+              <div className=" items-center gap-4 mb-6">
+                <div className="w-12 h-12 flex items-center justify-center  p-2">
                   <Image
                     src={sec.icon}
                     alt={`${sec.title} icon`}
-                    width={80}
-                    height={80}
+                    width={64}
+                    height={64}
                   />
                 </div>
-                <h3 className="text-xl md:text-3xl font-semibold">
-                  {sec.title}
-                </h3>
+                <h3 className="text-2xl md:text-4xl font-bold">{sec.title}</h3>
               </div>
 
-              <p className="text-white text-2xl mb-6 ">{sec.description}</p>
+              {/* Description */}
+              <p className="text-[#E0E0E0] text-lg md:text-xl lg:text-2xl leading-relaxed mb-8">
+                {sec.description}
+              </p>
 
               {/* Points */}
-              <ul className="space-y-6 mb-6 mt-6">
+              <ul className="space-y-5 mb-8">
                 {sec.points.map((point, pIdx) => (
                   <li
                     key={pIdx}
-                    className="flex items-start gap-3 text-[#FFFFFF] text-xl"
+                    className="flex items-start gap-4 text-[#FFFFFF] text-base md:text-lg lg:text-xl"
                   >
-                    <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-[#1E1E1E]">
+                    <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-[#1E1E1E]">
                       <FiCheck className="text-white text-sm" />
                     </span>
                     <span className="leading-relaxed">{point}</span>
@@ -80,13 +82,14 @@ export default function Innovation() {
                 ))}
               </ul>
 
+              {/* CTA */}
               <button
                 onClick={() => router.push("/contact#contact-form")}
-                className="bg-[#57BFFF] hover:bg-[#3ba7dd] text-white font-semibold px-6 py-3 rounded-2xl cursor-pointer flex items-center gap-2 transition-all duration-300 group w-max mt-6"
+                className="bg-[#57BFFF] hover:bg-[#3ba7dd] text-white font-semibold px-7 py-4 rounded-2xl cursor-pointer flex items-center gap-3 transition-all duration-300 group w-max"
               >
                 Get Started
                 <FiArrowRight
-                  size={16}
+                  size={20}
                   className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </button>

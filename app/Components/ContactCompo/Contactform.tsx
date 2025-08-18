@@ -56,7 +56,7 @@ export default function Contactform() {
     newErrors.email = "Invalid email format";
   if (!form.phone.trim()) newErrors.phone = "Phone is required";
   else if (!/^\d{7,15}$/.test(form.phone))
-    newErrors.phone = "Phone number must be 7–15 digits";
+    newErrors.phone = "Phone number must be 10 digits";
   if (!form.category) newErrors.category = "Please select a category";
   if (!form.message.trim()) newErrors.message = "Message is required";
   return newErrors;
@@ -118,7 +118,7 @@ export default function Contactform() {
             value={form.name}
             onChange={handleChange}
             placeholder="Enter Your Name"
-            className="w-full bg-transparent border-b border-gray-500 focus:border-[#57BFFF] outline-none py-2"
+            className="w-full bg-transparent border-b border-white focus:border-[#57BFFF] outline-none py-2"
           />
           {errors.name && <p className="text-red-400 text-sm">{errors.name}</p>}
         </div>
@@ -130,7 +130,7 @@ export default function Contactform() {
             name="category"
             value={form.category}
             onChange={handleChange}
-            className="w-full bg-transparent border-b border-gray-500 focus:border-[#57BFFF] outline-none py-2"
+            className="w-full bg-transparent border-b border-white focus:border-[#57BFFF] outline-none py-2"
           >
             <option value="">Select</option>
             <option value="web">Web Development</option>
@@ -151,7 +151,7 @@ export default function Contactform() {
             value={form.email}
             onChange={handleChange}
             placeholder="Enter Your Email"
-            className="w-full bg-transparent border-b border-gray-500 focus:border-[#57BFFF] outline-none py-2"
+            className="w-full bg-transparent border-b border-white focus:border-[#57BFFF] outline-none py-2"
           />
           {errors.email && <p className="text-red-400 text-sm">{errors.email}</p>}
         </div>
@@ -165,7 +165,7 @@ export default function Contactform() {
             onChange={handleChange}
             placeholder="Your Message Here..."
             rows={5}
-            className="w-full bg-transparent border-b border-gray-500 focus:border-[#57BFFF] outline-none py-2 resize-none"
+            className="w-full bg-transparent border-b border-white focus:border-[#57BFFF] outline-none py-2 resize-none"
           />
           {errors.message && (
             <p className="text-red-400 text-sm">{errors.message}</p>
@@ -175,12 +175,12 @@ export default function Contactform() {
         {/* Phone */}
         <div>
           <label className="block font-semibold mb-2">Phone</label>
-          <div className="flex gap-2 border-b border-gray-500 focus-within:border-[#57BFFF]">
+          <div className="flex gap-2 border-b border-white focus-within:border-[#57BFFF]">
             <select
               name="countryCode"
               value={form.countryCode}
               onChange={handleChange}
-              className="bg-transparent text-gray-400 outline-none py-2"
+              className="bg-transparent text-[#868686]outline-none py-2"
             >
               {countryCodes.map((c, idx) => (
                 <option key={idx} value={c.code}>

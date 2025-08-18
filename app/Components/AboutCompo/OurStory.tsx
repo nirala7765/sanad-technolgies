@@ -3,16 +3,19 @@ import { OUR_STORY } from "../../../Const";
 
 export default function OurStorySection() {
   return (
-    <section id="our-story" className="min-h-screen bg-black text-white flex flex-col justify-center px-6 md:px-12 py-16">
+    <section
+      id="our-story"
+      className="min-h-screen bg-black text-white flex flex-col justify-center px-6 md:px-12 py-12 md:pt-50 "
+    >
       {/* Section Title */}
-      <h2 className="text-center text-2xl md:text-4xl lg:text-5xl font-bold mb-12">
+      <h2 className="text-center text-2xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-16">
         {OUR_STORY.sectionTitle}
       </h2>
 
-      <div className="flex flex-col gap-16 w-full max-w-6xl mx-auto">
+      <div className="flex flex-col gap-12 w-full  mx-auto">
         {/* First Block */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="relative w-full h-[200px] sm:h-[280px] md:h-[350px] lg:h-[400px]">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="relative w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[380px]">
             <Image
               src={OUR_STORY.firstBlock.image}
               alt="Our Story Part 1"
@@ -26,11 +29,11 @@ export default function OurStorySection() {
         </div>
 
         {/* Second Block */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           <p className="text-base md:text-lg text-[#ABABAB] leading-relaxed order-2 md:order-1 text-center md:text-left">
             {OUR_STORY.secondBlock.text}
           </p>
-          <div className="relative w-full h-[200px] sm:h-[280px] md:h-[350px] lg:h-[400px] order-1 md:order-2">
+          <div className="relative w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[380px] order-1 md:order-2">
             <Image
               src={OUR_STORY.secondBlock.image}
               alt="Our Story Part 2"

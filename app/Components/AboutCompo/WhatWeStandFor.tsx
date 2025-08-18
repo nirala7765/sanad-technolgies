@@ -11,19 +11,19 @@ const blocks = [
     id: 1,
     title: "Mission",
     text: "Empower businesses with simple, effective, and lasting technology solutions that drive real results for clients.",
-    icon: <FaFlask size={36} />,
+    icon: <FaFlask size={42} />, // ⬆️ larger icon
   },
   {
     id: 2,
     title: "Vision",
     text: "Be the trusted technology partner that turns ideas into innovations and challenges into growth.",
-    icon: <MdOutlineRocketLaunch size={36} />,
+    icon: <MdOutlineRocketLaunch size={42} />,
   },
   {
     id: 3,
     title: "Values",
     text: "Client-first, transparent, and committed to excellence — delivering solutions that last and scale.",
-    icon: <FaHandshake size={36} />,
+    icon: <FaHandshake size={42} />,
   },
 ];
 
@@ -34,15 +34,14 @@ export default function WhatWeStandFor() {
     <section
       className="
         bg-black text-white
-        lg:h-[100svh] h-auto
         flex flex-col items-center justify-center
-        px-4 py-10
+        px-6 md:px-12 py-12 md:pt-50
       "
     >
       <h2
         className="
           text-2xl md:text-4xl lg:text-5xl
-          font-bold mb-8 lg:mb-28 text-center
+          font-bold mb-16 text-center
         "
       >
         What We Stand For
@@ -51,7 +50,7 @@ export default function WhatWeStandFor() {
       <div
         className="
           grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-          gap-6 lg:gap-8 w-full max-w-6xl
+          gap-8 w-full 
         "
       >
         {blocks.map((block) => {
@@ -63,8 +62,8 @@ export default function WhatWeStandFor() {
               onMouseEnter={() => setHoverId(block.id)}
               onMouseLeave={() => setHoverId(null)}
               className={`
-                group  rounded-lg
-                p-6 md:p-7 lg:p-8
+                group rounded-2xl
+                p-8 md:p-10 lg:p-12
                 bg-[#1A1A1A] transition-all duration-300 border-2
                 flex flex-col justify-between
                 ${
@@ -72,45 +71,37 @@ export default function WhatWeStandFor() {
                     ? `border-[${THEME_COLOR}]`
                     : "border-transparent hover:border-[#808080]"
                 }
-                lg:w-[380px] lg:h-[435px]
+                lg:w-[400px] lg:h-[480px]
                 w-full h-auto
                 mx-auto md:mx-0
               `}
             >
               {/* Top section: Icon + Title */}
-              <div className="flex flex-col gap-3 md:gap-4">
+              <div className="flex flex-col gap-4">
                 <div
                   className={`
                     transition-colors duration-300
-                    ${
-                      isActive
-                        ? `text-[${THEME_COLOR}]`
-                        : "text-white"
-                    }
+                    ${isActive ? `text-[${THEME_COLOR}]` : "text-white"}
                   `}
                 >
                   {block.icon}
                 </div>
-                <h3 className="text-xl md:text-2xl lg:text-4xl font-bold">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   {block.title}
                 </h3>
               </div>
 
               {/* Middle section: Description */}
-              <p className="text-sm md:text-base text-[#EEEEEE] leading-relaxed my-3 md:my-4 flex-grow">
+              <p className="text-base md:text-lg text-[#EEEEEE] leading-relaxed my-4 flex-grow">
                 {block.text}
               </p>
 
               {/* Bottom section: Number */}
               <span
                 className={`
-                  text-3xl md:text-5xl lg:text-7xl
+                  text-4xl md:text-6xl lg:text-7xl
                   font-light transition-colors duration-300
-                  ${
-                    isActive
-                      ? `text-[${THEME_COLOR}]`
-                      : "text-[#808080]"
-                  }
+                  ${isActive ? `text-[${THEME_COLOR}]` : "text-[#808080]"}
                 `}
               >
                 {String(block.id).padStart(2, "0")}
