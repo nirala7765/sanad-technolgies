@@ -91,7 +91,8 @@ export default function Contactform() {
       {/* Heading */}
       <div className="text-center mb-8 sm:mb-12">
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight pb-6 sm:pb-8">
-          Let’s Build Something That Works <br className="hidden sm:block" /> for You!
+          Let’s Build Something That Works <br className="hidden sm:block" />{" "}
+          for You!
         </h2>
       </div>
 
@@ -203,17 +204,20 @@ export default function Contactform() {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 md:col-span-2 justify-center pt-8">
+        <div className="flex flex-col sm:flex-row gap-6 md:col-span-2 justify-center pt-8 px-4">
+          {/* Clear Button */}
           <button
             type="button"
             onClick={handleClear}
-            className="w-[180px] py-3 rounded-2xl border border-[#57BFFF] text-white font-semibold text-lg hover:bg-[#1a1a1a] transition duration-300"
+            className="border border-[#57BFFF] text-white font-semibold px-7 py-3 rounded-2xl hover:bg-[#1a1a1a] transition duration-300 cursor-pointer text-[15px] md:w-auto mx-auto sm:mx-0 w-full min-w-[160px]"
           >
             Clear
           </button>
+
+          {/* Submit Button */}
           <button
             type="submit"
-            className="w-[180px] py-3 rounded-2xl bg-[#57BFFF] text-white font-semibold text-lg hover:bg-[#3ba7dd] transition duration-300"
+            className="bg-[#57BFFF] text-white font-semibold px-7 py-3 rounded-2xl hover:bg-[#3ba7dd] transition duration-300 cursor-pointer text-[15px] md:w-auto mx-auto sm:mx-0 w-full min-w-[160px]"
           >
             Submit
           </button>
