@@ -80,6 +80,7 @@ export const services = [
 // The data can be fetched from an API or defined statically as shown below
 // This is a simple and effective way to manage process steps in a React application
 
+
 export const PROCESS_STEPS = [
   {
     phase: "Define Phase",
@@ -221,9 +222,11 @@ export const aiSteps = [
   },
 ];
 
+
 //component in AboutCompo folder
 // Transform Business Data for the TransformBusiness component in HomeCompo folder
 // This data can be used to render the Transform Business section
+
 
 export const transformBusinessData = {
   videoSrc: "/bg1.mp4", // path from /public folder
