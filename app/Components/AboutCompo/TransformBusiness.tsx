@@ -36,7 +36,7 @@ export default function TransformBusiness() {
 
           {/* Bottom left heading + underline + button */}
           <div className="mt-8 md:mt-0">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold max-w-2xl border-b-4 border-[#57BFFF] pb-3 inline-block">
+            <h2 className="text-2xl md:text-4xl  font-extrabold max-w-2xl border-b-4 border-[#57BFFF] pb-3 inline-block">
               {heading}
             </h2>
 

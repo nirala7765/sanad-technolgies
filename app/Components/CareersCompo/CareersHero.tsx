@@ -32,7 +32,7 @@ export default function CareersHero(): React.ReactElement {
         <div className="flex flex-col sm:flex-row justify-center gap-6 flex-wrap px-4">
           <button
             onClick={() => router.push("/contact#contact-form")}
-            className="bg-[#57BFFF] text-white font-semibold px-7 py-3.5 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-[15px] w-auto mx-auto sm:mx-0"
+            className="bg-[#57BFFF] text-white font-semibold px-7 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-[15px] w-auto mx-auto sm:mx-0"
           >
             Get In Touch
           </button>

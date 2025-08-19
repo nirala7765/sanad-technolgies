@@ -15,15 +15,19 @@ export default function HeroSection() {
               const el = document.getElementById("ai-roadmap");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group inline-flex items-center gap-3 border border-[#57BFFF] rounded-full px-6 py-3 text-sm md:text-base cursor-pointer hover:bg-[#57BFFF]/10 transition"
+            className="group inline-flex items-center gap-3 border border-[#57BFFF] rounded-full px-6 py-3 text-sm md:text-base cursor-pointer hover:bg-[#57BFFF]/10 transition-colors duration-300"
           >
-            <span className="font-bold text-white">Looking for AI?</span>
-            <span className="text-white">|</span>
-            <span className="flex items-center gap-2 font-medium text-[#9D9D9D]">
-              Click Here
+            <span className="font-bold text-white transition-colors duration-300">
+              Looking for AI?
+            </span>
+            <span className="text-white transition-colors duration-300">|</span>
+            <span className="flex items-center gap-2">
+              <span className="font-medium text-[#9D9D9D] group-hover:text-white group-hover:font-bold transition-all duration-300 ease-in-out">
+                Click Here
+              </span>
               <FiArrowRight
                 size={18}
-                className="relative z-10 text-[#9D9D9D] group-hover:translate-x-1 transition-transform duration-300"
+                className="relative z-10 text-[#9D9D9D] transition-transform duration-300 group-hover:translate-x-1"
               />
             </span>
           </div>
@@ -34,8 +38,7 @@ export default function HeroSection() {
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[58px] font-extrabold leading-tight">
             <span className="block">Make Technology Work for Your</span>
             <span className="block">
-              Business with{" "}
-              <span className="text-[#57BFFF]">Sanad Tech</span>
+              Business with <span className="text-[#57BFFF]">Sanad Tech</span>
             </span>
           </h1>
         </div>
@@ -45,7 +48,7 @@ export default function HeroSection() {
           {/* Let's Talk button */}
           <button
             onClick={() => router.push("/contact#contact-form")}
-            className="bg-[#57BFFF] text-white font-semibold px-6 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-[15px] w-auto mx-auto sm:mx-0"
+            className="bg-[#57BFFF] text-white font-semibold px-7 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-[15px] w-auto mx-auto sm:mx-0"
           >
             Let&apos;s Talk
           </button>

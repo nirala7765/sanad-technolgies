@@ -56,13 +56,13 @@ export default function CultureSection() {
       </div>
 
       {/* Call to Action */}
-      <div className="flex flex-col sm:flex-row items-center justify-center md:gap-16 bg-black border-t border-gray-800 pt-16 md:px-7 mx-auto">
+      <div className="flex flex-col sm:flex-row items-center justify-center md:gap-9 bg-black border-t border-gray-800 pt-16 md:px-7 mx-auto">
         <p className="text-center sm:text-left text-lg font-medium mb-4 sm:mb-0">
           Join us and shape the future of technology
         </p>
         <a
           href="/contact#contact-form"
-          className="px-6 py-2 bg-[#57BFFF] hover:bg-[#3ba7dd] rounded-2xl font-medium transition-all duration-300 hover:scale-105"
+          className="px-6 py-3 bg-[#57BFFF] hover:bg-[#3ba7dd] rounded-2xl  transition-all duration-300 hover:scale-105 font-bold"
         >
           Apply Now
         </a>

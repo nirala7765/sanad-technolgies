@@ -62,7 +62,7 @@ export default function AIRoadmap() {
           </p>
           <button
             onClick={() => router.push("/contact#contact-form")}
-            className="bg-[#57BFFF] text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-[#3ba7dd] transition cursor-pointer"
+            className="bg-[#57BFFF] text-white font-semibold px-7 py-3 rounded-xl hover:bg-[#3ba7dd] transition cursor-pointer"
           >
             Let’s Talk
           </button>

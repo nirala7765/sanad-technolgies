@@ -16,15 +16,19 @@ export default function AboutHero() {
               const el = document.getElementById("ai-roadmap");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group inline-flex items-center gap-3 border border-[#57BFFF] rounded-full px-6 py-3 text-sm md:text-base cursor-pointer hover:bg-[#57BFFF]/10 transition"
+            className="group inline-flex items-center gap-3 border border-[#57BFFF] rounded-full px-6 py-3 text-sm md:text-base cursor-pointer hover:bg-[#57BFFF]/10 transition-colors duration-300"
           >
-            <span className="font-bold text-white">Looking for AI?</span>
-            <span className="text-white">|</span>
-            <span className="flex items-center gap-2 font-medium text-[#9D9D9D]">
-              Click Here
+            <span className="font-bold text-white transition-colors duration-300">
+              Looking for AI?
+            </span>
+            <span className="text-white transition-colors duration-300">|</span>
+            <span className="flex items-center gap-2">
+              <span className="font-medium text-[#9D9D9D] group-hover:text-white group-hover:font-bold transition-all duration-300 ease-in-out">
+                Click Here
+              </span>
               <FiArrowRight
                 size={18}
-                className="relative z-10 text-[#9D9D9D] group-hover:translate-x-1 transition-transform duration-300"
+                className="relative z-10 text-[#9D9D9D] transition-transform duration-300 group-hover:translate-x-1"
               />
             </span>
           </div>
@@ -37,16 +41,16 @@ export default function AboutHero() {
           </h1>
         </div>
 
-                {/* Description */}
+        {/* Description */}
         <div className="text-center max-w-4xl mx-auto px-4">
           <p className="text-[#808080] text-lg md:text-xl lg:text-2xl leading-relaxed ">
-            At Sanad Technologies, we turn ideas into solutions that work in the real
-            world. Our team combines tech expertise with business know-how to help you
-            build, innovate, and grow. From apps and AI to cloud and process
-            optimization, we make technology simple, effective, and tailored to you.
+            At Sanad Technologies, we turn ideas into solutions that work in the
+            real world. Our team combines tech expertise with business know-how
+            to help you build, innovate, and grow. From apps and AI to cloud and
+            process optimization, we make technology simple, effective, and
+            tailored to you.
           </p>
         </div>
-
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-6 flex-wrap">
@@ -76,7 +80,6 @@ export default function AboutHero() {
             </span>
           </button>
         </div>
-
 
         {/* Hero Video */}
         <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden h-[280px] sm:h-[380px] md:h-[480px] lg:h-[560px] shadow-lg">

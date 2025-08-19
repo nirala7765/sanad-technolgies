@@ -54,7 +54,7 @@ const NavBar = () => {
           {/* Desktop Contact */}
           <Link
             href="/contact"
-            className="hidden md:inline-block bg-[#57BFFF] hover:bg-[#3ba7dd] text-white px-4 sm:px-5 py-2 rounded-xl font-semibold transition"
+            className="hidden md:inline-block bg-[#57BFFF] hover:bg-[#3ba7dd] text-white px-4 sm:px-5 py-3 rounded-2xl font-semibold transition"
           >
             Contact Us
           </Link>
