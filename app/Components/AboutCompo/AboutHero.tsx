@@ -53,11 +53,15 @@ export default function AboutHero() {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-6 flex-wrap">
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-6 flex-wrap w-full max-w-lg mx-auto">
           {/* Let's Talk button */}
           <button
             onClick={() => router.push("/contact#contact-form")}
-            className="bg-[#57BFFF] text-white font-semibold px-8 py-4 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-base md:text-lg w-auto mx-auto sm:mx-0"
+            className="bg-[#57BFFF] text-white font-semibold px-7 py-3 rounded-2xl 
+               hover:bg-[#3ba7dd] transition cursor-pointer text-base md:text-lg
+               w-full sm:w-auto min-w-[160px] text-center
+               mb-4 sm:mb-0"
           >
             Let&apos;s Talk
           </button>
@@ -68,9 +72,12 @@ export default function AboutHero() {
               const el = document.getElementById("our-story");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group flex items-center gap-3 border border-gray-600 px-7 py-3.5 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer text-[15px] w-auto mx-auto sm:mx-0"
+            className="group flex items-center justify-center gap-3 border border-gray-600 px-7 py-3 rounded-2xl 
+               hover:bg-white hover:text-black transition cursor-pointer text-base md:text-lg
+               w-full sm:w-auto min-w-[160px] text-center
+               mb-4 sm:mb-0"
           >
-            Learn More
+            <span className="flex-1 text-center sm:flex-none">Learn More</span>
             <span className="relative flex items-center justify-center">
               <span className="absolute w-8 h-8 rounded-full bg-white/10 group-hover:bg-black/10 transition"></span>
               <FiArrowRight

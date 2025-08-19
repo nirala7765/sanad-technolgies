@@ -126,7 +126,7 @@ export const PROCESS_STEPS = [
 
 export const sections = [
   {
-    icon: "/aiicon.png", // replace with your PNG icon path
+    icon: "/ai.svg", // replace with your PNG icon path
     title: "Find Your AI Advantage",
     description:
       "Our free AI Pathfinder Assessment identifies exactly how AI can create value in your business, helping you move from curiosity to concrete results.",
@@ -141,7 +141,7 @@ export const sections = [
     img: "/ai1.png",
   },
   {
-    icon: "/workflow.png",
+    icon: "/ml.svg",
     title: "Migration & Workflow Optimization",
     description:
       "We evaluate your existing systems and workflows to uncover inefficiencies and plan a migration that improves performance, cuts waste, and supports future growth.",
@@ -153,7 +153,7 @@ export const sections = [
     img: "/mig2.png",
   },
   {
-    icon: "/retailicon.png",
+    icon: "/retail.svg",
     title: "From Retail to Healthcare, We’ve Got You Covered",
     description:
       "From retail to healthcare, our solutions are tailored to the realities of your sector — helping you solve real problems and seize new opportunities.",
@@ -167,7 +167,7 @@ export const sections = [
     img: "/fr3.png",
   },
   {
-    icon: "/scalericon.png",
+    icon: "/ss.svg",
     title: "Scale, Secure, and Streamline with the Cloud",
     description:
       "We design and implement cloud strategies that give you flexibility, reliability, and control over your data — without unnecessary complexity.",
@@ -181,7 +181,7 @@ export const sections = [
     img: "/ss4.png",
   },
   {
-    icon: "/supportai.png",
+    icon: "/os.svg",
     title: "Ongoing Support & Strategic Consulting",
     description:
       "We stay with you long after delivery, ensuring your technology continues to perform, adapt, and deliver measurable value as your business evolves.",

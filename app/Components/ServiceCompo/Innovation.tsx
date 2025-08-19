@@ -7,75 +7,73 @@ import { useRouter } from "next/navigation";
 export default function Innovation() {
   const router = useRouter();
   return (
-    <section className="bg-black text-white px-6 md:px-12 py-12 md:pt-50">
+    <section className="bg-black text-white px-6 md:px-12 py-12">
       {/* Heading */}
-      <div className="text-center  mx-auto mb-20 space-y-8">
-        <h2 className="text-3xl md:text-5xl  font-extrabold leading-tight md:px-88">
+      <div className="text-center mx-auto mb-16 max-w-4xl space-y-4">
+        <h2 className="text-3xl md:text-4xl font-bold leading-snug">
           Ignite Your Potential with AI-Driven Innovations
         </h2>
-        <p className="mt-4 text-[#A0A0A0] text-lg md:text-xl md:px-88">
+        <p className="text-[#A0A0A0] text-base md:text-lg">
           Fuel your business growth with AI solutions that are dynamic, adaptive, and tailored to match your ambitions.
         </p>
       </div>
 
       {/* Sections */}
-      <div className="space-y-16">
+      <div className="space-y-12">
         {sections.map((sec, idx) => (
           <div
             key={idx}
-            className={`flex flex-col md:flex-row items-center gap-12 lg:gap-20 py-12 md:py-16 rounded-2xl ${
+            className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 py-8 ${
               idx % 2 === 0 ? "md:flex-row-reverse" : ""
             }`}
           >
             {/* Image Container */}
             <div
               className={`w-full md:w-1/2 flex-shrink-0 flex ${
-                idx % 2 === 0
-                  ? "justify-center md:justify-end"
-                  : "justify-center md:justify-start"
+                idx % 2 === 0 ? "justify-center md:justify-end" : "justify-center md:justify-start"
               }`}
             >
-              <div className="relative w-full max-w-[540px] md:h-[650px] h-[300px] rounded-2xl overflow-hidden shadow-lg">
+              <div className="relative w-full max-w-lg md:h-[32rem] h-80 rounded-xl overflow-hidden shadow-md">
                 <Image
                   src={sec.img}
                   alt={sec.title}
                   fill
                   style={{ objectFit: "cover" }}
-                  className="rounded-2xl"
-                  sizes="(max-width: 768px) 100vw, 540px"
+                  className="rounded-xl"
+                  sizes="(max-width: 768px) 100vw, 400px"
                 />
               </div>
             </div>
 
             {/* Content */}
-            <div className="w-full md:w-1/2 flex flex-col justify-center">
+            <div className="w-full md:w-1/2 flex flex-col justify-center space-y-4">
               {/* Title */}
-              <div className=" items-center gap-4 mb-6">
-                <div className="w-12 h-12 flex items-center justify-center  p-2">
+              <div className=" items-center gap-4 mb-4">
+                <div className="w-28 h-28 flex items-center justify-start p-2 left-0">
                   <Image
                     src={sec.icon}
                     alt={`${sec.title} icon`}
-                    width={64}
-                    height={64}
+                    width={50}
+                    height={50}
                   />
                 </div>
-                <h3 className="text-2xl md:text-4xl font-bold">{sec.title}</h3>
+                <h3 className="text-xl md:text-2xl font-semibold">{sec.title}</h3>
               </div>
 
               {/* Description */}
-              <p className="text-[#E0E0E0] text-lg md:text-xl lg:text-2xl leading-relaxed mb-8">
+              <p className="text-[#E0E0E0] text-sm md:text-base leading-relaxed m">
                 {sec.description}
               </p>
 
               {/* Points */}
-              <ul className="space-y-5 mb-8">
+              <ul className="space-y-5 mt-3">
                 {sec.points.map((point, pIdx) => (
                   <li
                     key={pIdx}
-                    className="flex items-start gap-4 text-[#FFFFFF] text-base md:text-lg lg:text-xl"
+                    className="flex items-start gap-3 text-[#FFFFFF] text-sm md:text-base"
                   >
-                    <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-[#1E1E1E]">
-                      <FiCheck className="text-white text-sm" />
+                    <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-[#1E1E1E]">
+                      <FiCheck className="text-white text-xs md:text-sm" />
                     </span>
                     <span className="leading-relaxed">{point}</span>
                   </li>
@@ -85,11 +83,11 @@ export default function Innovation() {
               {/* CTA */}
               <button
                 onClick={() => router.push("/contact#contact-form")}
-                className="bg-[#57BFFF] hover:bg-[#3ba7dd] text-white font-semibold px-7 py-4 rounded-2xl cursor-pointer flex items-center gap-3 transition-all duration-300 group w-max"
+                className="bg-[#57BFFF] hover:bg-[#3ba7dd] text-white font-medium px-6 py-3 rounded-xl cursor-pointer mt-3 flex items-center gap-2 transition-all duration-300 w-max"
               >
                 Get Started
                 <FiArrowRight
-                  size={20}
+                  size={18}
                   className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </button>

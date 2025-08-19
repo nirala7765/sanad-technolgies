@@ -22,7 +22,7 @@ export default function CareersHero(): React.ReactElement {
 
         {/* Description below buttons */}
         <div className="text-center max-w-2xl mx-auto px-6">
-          <p className="text-[#808080] text-base sm:text-lg md:text-xl leading-relaxed ">
+          <p className="text-[#808080] text-base sm:text-lg md:text-xl leading-relaxed">
             Join a team where innovation thrives, ideas matter, and your work
             shapes the way businesses succeed.
           </p>
@@ -30,18 +30,23 @@ export default function CareersHero(): React.ReactElement {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-6 flex-wrap px-4">
+          {/* Get In Touch button */}
           <button
             onClick={() => router.push("/contact#contact-form")}
-            className="bg-[#57BFFF] text-white font-semibold px-7 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-[15px] w-auto mx-auto sm:mx-0"
+            className="bg-[#57BFFF] text-white font-semibold px-7 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-[15px] md:w-auto mx-auto sm:mx-0 w-full min-w-[160px]"
           >
             Get In Touch
           </button>
 
+          {/* About Us button */}
           <button
             onClick={() => router.push("/about")}
-            className="group flex items-center gap-3 border border-gray-600 px-7 py-3.5 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer text-[15px] w-auto mx-auto sm:mx-0"
+            className="group flex items-center justify-center sm:justify-start gap-3 border border-gray-600 px-7 py-3 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer text-[15px] md:w-auto mx-auto sm:mx-0 w-full min-w-[160px]"
           >
-            About Us
+            {/* Text centered on mobile */}
+            <span className="flex-1 text-center sm:flex-none">About Us</span>
+
+            {/* Arrow aligned properly */}
             <span className="relative flex items-center justify-center">
               <span className="absolute w-7 h-7 rounded-full bg-white/10 group-hover:bg-black/10 transition"></span>
               <FiArrowRight

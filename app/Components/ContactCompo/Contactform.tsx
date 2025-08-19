@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-// Example list of country codes (you can expand as needed)
 const countryCodes = [
   { code: "+91", name: "India" },
   { code: "+1", name: "USA" },
@@ -29,10 +28,12 @@ export default function Contactform() {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); // clear error on change
+    setErrors({ ...errors, [e.target.name]: "" });
   };
 
   const handleClear = () => {
@@ -49,19 +50,18 @@ export default function Contactform() {
   };
 
   const validateForm = () => {
-  const newErrors: { [key: string]: string } = {};
-  if (!form.name.trim()) newErrors.name = "Name is required";
-  if (!form.email.trim()) newErrors.email = "Email is required";
-  else if (!/\S+@\S+\.\S+/.test(form.email))
-    newErrors.email = "Invalid email format";
-  if (!form.phone.trim()) newErrors.phone = "Phone is required";
-  else if (!/^\d{7,15}$/.test(form.phone))
-    newErrors.phone = "Phone number must be 10 digits";
-  if (!form.category) newErrors.category = "Please select a category";
-  if (!form.message.trim()) newErrors.message = "Message is required";
-  return newErrors;
-};
-
+    const newErrors: { [key: string]: string } = {};
+    if (!form.name.trim()) newErrors.name = "Name is required";
+    if (!form.email.trim()) newErrors.email = "Email is required";
+    else if (!/\S+@\S+\.\S+/.test(form.email))
+      newErrors.email = "Invalid email format";
+    if (!form.phone.trim()) newErrors.phone = "Phone is required";
+    else if (!/^\d{7,15}$/.test(form.phone))
+      newErrors.phone = "Phone number must be 7–15 digits";
+    if (!form.category) newErrors.category = "Please select a category";
+    if (!form.message.trim()) newErrors.message = "Message is required";
+    return newErrors;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -74,26 +74,24 @@ export default function Contactform() {
 
     console.log("Form submitted:", form);
     setSuccessMsg("Your response has been submitted successfully!");
-    setForm({
-      name: "",
-      email: "",
-      phone: "",
-      countryCode: "+91",
-      category: "",
-      message: "",
-    });
+    handleClear();
   };
 
   return (
     <section
       id="contact-form"
-      className="bg-black text-white px-6 py-12 pt-[100px] md:pt-[200px] md:px-20 lg:px-32"
+      className="
+        bg-black text-white 
+        px-4 sm:px-6 md:px-20 lg:px-32
+        py-12 
+        pt-[120px] sm:pt-[150px] md:pt-[200px]
+      "
       style={{ scrollMarginTop: "120px" }}
     >
       {/* Heading */}
-      <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-5xl font-bold leading-tight pb-8">
-          Let’s Build Something That Works <br /> for You!
+      <div className="text-center mb-8 sm:mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight pb-6 sm:pb-8">
+          Let’s Build Something That Works <br className="hidden sm:block" /> for You!
         </h2>
       </div>
 
@@ -107,7 +105,7 @@ export default function Contactform() {
       {/* Form */}
       <form
         onSubmit={handleSubmit}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto w-full"
       >
         {/* Name */}
         <div>
@@ -153,7 +151,9 @@ export default function Contactform() {
             placeholder="Enter Your Email"
             className="w-full bg-transparent border-b border-white focus:border-[#57BFFF] outline-none py-2"
           />
-          {errors.email && <p className="text-red-400 text-sm">{errors.email}</p>}
+          {errors.email && (
+            <p className="text-red-400 text-sm">{errors.email}</p>
+          )}
         </div>
 
         {/* Message */}
@@ -180,7 +180,7 @@ export default function Contactform() {
               name="countryCode"
               value={form.countryCode}
               onChange={handleChange}
-              className="bg-transparent text-[#868686]outline-none py-2"
+              className="bg-transparent text-[#868686] outline-none py-2 w-24"
             >
               {countryCodes.map((c, idx) => (
                 <option key={idx} value={c.code}>
@@ -203,17 +203,17 @@ export default function Contactform() {
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-4 md:col-span-2 justify-center pt-6">
+        <div className="flex flex-col sm:flex-row gap-6 md:col-span-2 justify-center pt-8">
           <button
             type="button"
             onClick={handleClear}
-            className="px-6 py-2 rounded-lg border border-[#57BFFF] hover:bg-gray-800 cursor-pointer"
+            className="w-[180px] py-3 rounded-2xl border border-[#57BFFF] text-white font-semibold text-lg hover:bg-[#1a1a1a] transition duration-300"
           >
             Clear
           </button>
           <button
             type="submit"
-            className="px-6 py-2 rounded-lg bg-[#57BFFF] hover:bg-[#3ba7dd] text-white font-semibold cursor-pointer"
+            className="w-[180px] py-3 rounded-2xl bg-[#57BFFF] text-white font-semibold text-lg hover:bg-[#3ba7dd] transition duration-300"
           >
             Submit
           </button>

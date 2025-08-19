@@ -8,7 +8,7 @@ export default function ServiceHero() {
     <section className="relative bg-black text-white min-h-screen flex items-center px-6 md:px-12 py-20 md:py-28">
       <div className="w-full space-y-20">
         {/* Top Pill CTA */}
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mt-8 sm:mt-4">
           <div
             onClick={() => {
               const el = document.getElementById("ai-roadmap");
@@ -33,15 +33,15 @@ export default function ServiceHero() {
         </div>
 
         {/* Heading */}
-        <div className="text-center  mx-auto px-4">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[58px] font-extrabold  leading-tight">
+        <div className="text-center mx-auto px-4">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[58px] font-extrabold leading-tight">
             <span className="block">Explore What We Can Do for You</span>
           </h1>
         </div>
 
         {/* Description */}
         <div className="text-center max-w-5xl mx-auto px-4">
-          <p className="text-[#808080] text-lg md:text-xl lg:text-2xl leading-relaxed ">
+          <p className="text-[#808080] text-base sm:text-lg md:text-xl leading-relaxed">
             Explore tailored solutions — from intelligent platforms to scalable
             operations — designed to help your business innovate faster, operate
             smarter, and compete stronger.
@@ -53,7 +53,7 @@ export default function ServiceHero() {
           {/* Let's Talk button */}
           <button
             onClick={() => router.push("/contact#contact-form")}
-            className="bg-[#57BFFF] text-white font-semibold px-8 py-4 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-base md:text-lg w-auto mx-auto sm:mx-0"
+            className="bg-[#57BFFF] text-white font-semibold px-7 py-3 rounded-2xl hover:bg-[#3ba7dd] transition cursor-pointer text-[15px] md:w-auto mx-auto sm:mx-0 w-full min-w-[160px]"
           >
             Let&apos;s Talk
           </button>
@@ -61,14 +61,17 @@ export default function ServiceHero() {
           {/* About Us button */}
           <button
             onClick={() => router.push("/about")}
-            className="group flex items-center gap-3 border border-gray-600 px-7 py-3.5 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer text-[15px] w-auto mx-auto sm:mx-0"
+            className="group flex items-center justify-center sm:justify-start gap-3 border border-gray-600 px-7 py-3 rounded-2xl hover:bg-white hover:text-black transition cursor-pointer text-[15px] md:w-auto mx-auto sm:mx-0 w-full min-w-[160px]"
           >
-            About Us
+            {/* Text centered on mobile */}
+            <span className="flex-1 text-center sm:flex-none">About Us</span>
+
+            {/* Arrow at end */}
             <span className="relative flex items-center justify-center">
-              <span className="absolute w-8 h-8 rounded-full bg-white/10 group-hover:bg-black/10 transition"></span>
+              <span className="absolute w-7 h-7 rounded-full bg-white/10 group-hover:bg-black/10 transition"></span>
               <FiArrowRight
-                size={22}
-                className="relative z-10 transition-transform duration-300 "
+                size={18}
+                className="relative z-10 transition-transform duration-300"
               />
             </span>
           </button>
